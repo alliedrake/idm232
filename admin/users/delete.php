@@ -23,4 +23,4 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/../_global/footer.php';
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/../_global/footer.php':
