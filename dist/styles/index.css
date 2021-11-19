@@ -1,0 +1,989 @@
+  
+.html {
+  margin-left: 1rem;
+  margin-right: 1rem; 
+}
+
+body {
+  background: #FCFFFA;
+}
+
+ 
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('./fonts/Roboto-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('./fonts/Roboto-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('./fonts/Roboto-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('./fonts/Roboto-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {box-sizing: border-box;}
+
+/* Style the navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #DCE5D5;
+  height: 60px;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 22px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Roboto-Medium';
+  color: #333333;
+}
+
+/* Navbar links on mouse-over */
+.topnav a:hover {
+  background-color: #DCE5D5;
+  color: black;
+}
+
+/* Active/current link */
+.topnav a.active {
+  background-color: #DCE5D5;
+  color: black;
+}
+
+/* Style the input container */
+.topnav .search-container {
+  float: right;
+}
+
+/* Style the input field inside the navbar */
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 14px;
+  font-size: 15px;
+  font-family: 'Roboto-Regular';
+  color: #333333;
+  border: 1px solid #333333;
+  border-radius: 5px;
+
+}
+
+/* Style the button inside the input container */
+.topnav .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 14px;
+  margin-right: 20px;
+  background: #f2f2f2;
+  font-size: 15.3px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Roboto-Medium';
+  color: #333333;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  margin-left: 4px;
+
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 400px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+hr {
+  border: 2px solid #DCE5D5;
+
+}
+
+.image_container {
+  position: relative;
+  text-align: center;
+}
+
+.centered {
+font-size: 1.6rem;
+color: #333333;
+font-family: 'Roboto-Bold';
+padding-bottom: 2rem;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+#main-content-header {
+  font-family: 'Roboto-Bold';
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  font-size: 1.4rem;
+  color: #333333;
+
+}
+
+.main_content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 2rem;
+}
+
+.main_content a {
+  text-decoration: none;
+}
+
+.main_content img {
+  height: 230px;
+  width: 350px;
+}
+
+
+
+/* FEATURED */
+
+
+.featured h2 {
+  font-family: 'Roboto-Bold';
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  font-size: 2.1rem;
+  color: #333333;
+}
+
+.recipes1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 2rem;
+}
+
+.recipes1 h3 {
+  text-align: left;
+  font-size: 1.3rem;
+  font-family: 'Roboto-Bold';
+  color: #333333;
+}
+
+.recipes1 img {
+  height: 175px;
+  width:225px;
+}
+
+.featured1 h3, .featured2 h3 {
+    width:300px;
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+    word-wrap: break-word;
+    font-family: 'Roboto-Bold';
+    color: #333333;
+    padding-left: 2rem;
+}
+
+
+/* BANNER */
+
+.banner {
+  background-color: #DCE5D5;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner h2 {
+  font-family: 'Roboto-Medium';
+  color: #333333;
+}
+
+a.button1{
+  display:inline-block;
+  padding:0.5em 3em;
+  border:0.16em solid #333333;;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-family:'Roboto',sans-serif;
+  font-weight:400;
+  color: #333333;
+  text-align:center;
+  transition: all 0.15s;
+  }
+
+a.button1:hover{
+  color:#455C45;
+  border-color:#455C45;
+  }
+
+a.button1:active{
+  color:#333333;
+  border-color:#455C45;
+  }
+
+
+
+
+/* FAVORITES */
+
+.favorites h2 {
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2.1rem;
+  font-family: 'Roboto-Bold';
+  color: #333333;
+}
+
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 2rem;
+}
+
+.recipes h3 {
+  text-align: left;
+  font-size: 1.3rem;
+  font-family: 'Roboto-Bold';
+  color: #333333;
+}
+
+.recipes img {
+  height: 175px;
+  width:225px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DCE5D5;
+  height: 20%;
+}
+
+.footer img {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 80px;
+}
+
+
+/* RECIPE PAGE */
+
+.recipeicons {
+  display: flex;
+  justify-content: right;
+  gap: 15px;
+}
+
+.recipeicons img {
+  border: 2px solid #DCE5D5;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.recipe-container, .text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.recipe-container {
+  padding-top: 3rem;
+}
+
+.recipe_header h1, .ingredients h2{
+  padding-top: 0.5rem;
+  font-family: 'Roboto-Bold';
+  color: #333333;
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 2.6rem;
+}
+
+.ingredients {
+  padding-top: 2rem;
+}
+
+.directions h3 {
+  font-family: 'Roboto-Bold';
+  color: #333333;
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 2.6rem;
+  margin-bottom: -10px;
+}
+
+
+
+
+.recipe_header p, .ingredientlist li, .directions p {
+  line-height: 1.6rem;
+  font-family: 'Roboto-Light';
+  color: #333333;
+  width: 592px;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 1rem;
+}
+
+.ingredientlist ul {
+  padding-top: 1.5rem;
+}
+
+.recipe_header h4 {
+  font-family:"Roboto-Medium";
+  margin-top: -8px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.directions h2 {
+padding-top: 2rem;
+color: #333333;
+font-family: "Roboto-Bold";
+}
+
+
+.morerecipes img {
+  width: 175px;
+  height: 125px;
+}
+
+.morerecipes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+
+.morerecipes h3 {
+  text-align: left;
+  font-size: 1.2rem;
+  font-family: 'Roboto-Bold';
+  color: #333333;
+}
+
+.morerecipescontainer {
+  font-family:'Roboto-Bold';
+  color: #333333;
+}
+
+.result1 h3, .result2 h3 {
+  font-size: 1.6rem;
+}
+
+.descript h4 {
+  font-family: 'Roboto-Medium';
+}
+
+
+
+
+
+
+/* Category Page */
+
+.categoryheader, .categorydiv {
+  color: #333333;
+}
+
+.categoryheader, .searchheader {
+  padding-top: 2rem;
+  font-family: 'Roboto-Bold';
+  padding-left: 2rem;
+}
+
+
+
+
+
+
+/* filter */
+
+.categorydiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  }
+  
+
+.filtercontainer {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  flex-direction: column;
+  background-color: #F5F8F4;
+  padding-left: 2rem;
+  font-family: 'Roboto-Medium';
+  margin-left: 2rem;
+  padding-left: 1.3rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem; 
+  height: 400px;
+  width: 23%;
+  border: 2px solid #DCE5D5
+}
+
+.catresultcontainer {
+    font-family: 'Roboto-Bold';
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    width: 77%;
+}
+
+.filtercontainer h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.customizations {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+
+#filterbuttons {
+  padding-top:0.5rem;
+  text-align: center;
+}
+
+#submit, #submit2 {
+  color:#333333;
+  background-color: white;
+  font-family: 'Roboto-Medium';
+  border-style: none;
+  padding: 0.5rem;
+  display: inline-block;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  margin-bottom: 0.7rem;
+  border: 1px solid #DCE5D5;
+}
+
+#meal, #ingredient, #cooktime, #servings {
+  color:#333333;
+  background-color: white;
+  font-family: 'Roboto-Medium';
+  border-style: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  display: block;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom:-0.7rem;
+  width: 150px;
+  border: 1px solid #DCE5D5;
+}
+
+@media screen and (max-width: 900px) {
+  #meal, #ingredient, #cooktime, #servings {
+    width: 100px;
+  }
+}
+
+
+
+.result1, .result2, .result3, .result4 {
+  display: flex;
+  justify-content: center;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  gap: 100px;
+  padding-top: 1rem;
+} 
+
+.descript {
+  text-align: left;
+}
+
+.descript h3 {
+  font-size: 1.6rem;
+}
+
+.result1 img, .result2 img, .result3 img, .result4 img {
+  width: 30%;
+  align-self: right;
+}
+
+@media screen and ( max-width: 830px) {
+  
+  .result1 img, .result2 img, .result3 img, .result4 img {
+    width: 30%;
+    height: 100%;
+    padding-top: 1rem;
+}
+
+.result1 h4, .result2 h4, .result3 h4, .result4 h4 {
+font-size: 0.8rem;
+}
+
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+.logincontainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.logincontainer b {
+  font-family: 'Roboto-Medium';
+}
+
+#loginheader {
+  font-family: 'Roboto-Bold';
+  padding-top: 2rem;
+  text-align: center;
+  color: #333333;
+}
+
+.container input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: 'Roboto-Light';
+  margin-top:0.5rem;
+  margin-bottom:1rem;
+}
+
+.container {
+  font-family: 'Roboto';
+}
+
+.container #select {
+  padding: 5px;
+  background-color:#F5F8F4;
+  border: solid 2px #DCE5D5;
+  border-radius: 3px;
+}
+
+.container #submitbutton {
+  background-color: #DCE5D5;
+  color: #333333;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family:'Roboto-Bold';
+}
+
+.container button {
+  background-color: #DCE5D5;
+  color: #333333;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family:'Roboto-Bold';
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#text {
+  font-family: 'Roboto-Medium';
+}
+
+.container .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #db6a62;
+  color:#ffffff;
+}
+
+.psw {
+  font-family: 'Roboto-Light';
+}
+
+.remember {
+  font-family: 'Roboto-Light';
+  font-size:0.9rem;
+}
+
+.container {
+  padding: 16px;
+}
+
+
+.footerlogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DCE5D5;
+  height: 20%;
+  margin-top: 6rem;
+}
+
+.footerlogin img {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 80px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+/* All recipe page */
+
+.searchheader {
+  color: #333333;
+}
+
+.containerlist {
+  padding-top: 3rem;
+  font-family: 'Roboto-Bold';
+  color: #333333;
+}
+
+.containerlist h3 {
+font-size: 1.4rem;
+color: #333333;
+}
+
+.allrecipecontainer {
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.allrecipe1, .allrecipe2, .allrecipe3, .allrecipe4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 2rem;
+  gap: 80px;
+}
+
+.allrecipe1 img, .allrecipe2 img, .allrecipe3 img, .allrecipe4 img {
+width: 15%;
+}
+
+.hr {
+  width: 100%;
+}
+
+.editdelete img {
+  height: 32PX;
+  width: 32px;
+  float: right;
+  border: 2px solid #DCE5D5;
+  border-radius: 5px;
+}
+
+.editdelete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+  gap: 20px;
+}
+
+.recipesearchbar {
+  margin-left: 2rem;
+}
+
+.recipesearchbar button {
+  padding: 9px;
+  color:#333333;
+  background-color: #DCE5D5;
+  font-family: 'Roboto-Medium';
+  border: none;
+  border-radius: 5px;
+}
+
+.recipesearchbar input {
+  padding: 8px;
+  color:#333333;
+  background-color: #ffffff;
+  font-family: 'Roboto-Medium';
+  border: 1px solid #DCE5D5;
+  border-radius: 5px;
+}
+
+.addrecipebutton {
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: right;
+}
+
+.addrecipebutton button {
+  color: #333333;
+  background-color: white;
+  border: 2px solid #DCE5D5;
+  font-family: 'Roboto-Bold';
+  padding: 10px;
+  border-radius: 5px;
+  font-size:1rem;
+}
+
+.addrecipebutton a {
+  text-decoration: none;
+  color:#333333;
+}
+
+.addrecipeheader {
+  color: #333333;
+  font-family: 'Roboto-Bold';
+}
+
+/* Add Recipe Page */
+
+.addrecipeheader {
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+
+.recipeform {
+  font-family: 'Roboto-Bold';
+  font-size: 1.2rem;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 3rem;
+  margin-left: 8rem;
+  margin-right:8rem; 
+  gap: 15px;
+}
+
+.recipeform #rname, #rdate, #rimage, #rprep, #rcook, #rdescription, #ringredients, #rsteps {
+  padding: 5px;
+}
+
+.recipeform #rprep, #rcook, #rdate {
+  width: 200px;
+}
+
+.recipeform button {
+  color: #333333;
+  background-color: #DCE5D5;
+  border: none;
+  border-radius: 5px;
+}
+
+.rimagebutton img {
+  height: 24px;
+  width: 24px;
+}
+
+.rimagebutton {
+  width: 100px;
+  padding: 5px;
+}
+
+.recipeform #rdescription {
+  height: 150px;
+}
+
+.recipeform .ringredientsbutton {
+  width: 300px;
+  margin-top: -20px;
+  padding: 5px;
+}
+
+#ringredients {
+  width: 300px;
+}
+
+.recipeform #rstepstext {
+  height: 80px;
+}
+
+.recipeform .rstepsbutton {
+  margin-top: -20px;
+  padding: 5px;
+}
+
+.rstepsbutton img, .ringredientsbutton img {
+  height: 24px;
+  width: 24px;
+  padding-top: 1px;
+}
+
+
+.recipeform #rcommentstext {
+  height: 150px;
+  margin-bottom: 2rem;
+}
+
+.recipeform label {
+  padding-top: 10px;
+}
+
+.addrecipesubmit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+
+.addrecipesubmit button{
+  padding: 15px;
+  color: #333333;
+  background-color: #DCE5D5;
+  font-family: 'Roboto-Bold';
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+}
+
+/* admin links */
+
+.welcomeheader {
+  font-family: "Roboto-Bold";
+  padding-top: 2rem;
+  color: #333333;
+}
+
+.linklist {
+  font-family: "Roboto-Medium";
+  padding-top: 2rem;
+  color: #333333;
+}
+
+.linklist a {
+  text-decoration: underline;
+  color: #333333;
+}
+
+
+
+/* Default Table Style */
+table {
+  color: #333;
+  background: white;
+  border: 1px solid grey;
+  font-size: 12pt;
+  border-collapse: collapse;
+  font-family: 'Roboto-Light';
+  color:#333333;
+}
+
+
+table thead th,
+table tfoot th {
+  color: #777;
+  background: rgba(0,0,0,.1);
+}
+table caption {
+  padding:.5em;
+}
+table th,
+table td {
+  padding: .5em;
+  border: 1px solid lightgrey;
+}
