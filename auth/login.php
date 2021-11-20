@@ -1,34 +1,82 @@
 
 <?php $page_title = "LOG IN"; ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; ?>
+    <?php
+include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/header.php';
+
+if (isset($_POST['submit'])) {
+    // check if the username and password is valid
+    $email = mysqli_real_escape_string($db_connection, $_POST['email']);
+    $password = mysqli_real_escape_string($db_connection, $_POST['password']);
+
+    // Build Query
+    $query = 'SELECT * ';
+    $query .= 'FROM users ';
+    $query .= "WHERE email='{$email}'";
+
+    $results = mysqli_query($db_connection, $query);
+
+    if ($results && $results->num_rows > 0) {
+        // Get row from results and assign to $user variable;
+        $user = mysqli_fetch_assoc($results);
+
+        // Verify that the submitted password matches the password from the users db
+
+        if (password_verify($password, $user['password'])) {
+
+            // email + password exist
+            // Create a user array in the SESSION variable and assign values to it
+            
+
+            $_SESSION['user'] = [
+                'id' => $user['id'],
+                'first_name' => $user['first_name'],
+                'last_name' => $user['last_name'],
+                'role' => $user['role'],
+            ];
+
+            // echo '<pre>';
+            // var_dump($_SESSION);
+            // echo '</pre>';
+
+            redirectTo('/../admin');
+
+        } else {
+            
+          // Correct email but wrong password
+
+            die('Password does not match');
+            redirectTo('/auth/login.php?error=Email or Password doest not exist.');
+        }
+    } else {
+        // Wrong Email + Password
+        redirectTo('/auth/login.php?error=Email or Password doest not exist.');
+    }
+
+    // get form data
+  // get that email and check the database if they exist
+  // redirect to the admin
+}
 
 
-<div id="loginheader"><h2>Sign In | Sign Up</h2></div>
+?>
+<div class="logincontainer">
+  <div class="container">
+  <h1>Login</h1>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/_components/alert.php'; ?>
+  <form action="" method="post">
+    <label for="emailField">Email</label>
+    <input type="email" name="email" id="emailField" value="" required>
 
-        <div class='logincontainer'>
+    <label for="passwordField">Password</label>
+    <input type="password" name="password" id="passwordField" value="" >
 
-        <form action="/_includes/process_login_form.php" method="post">
-        
-        
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-        
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-                
-            <button type="submit">Login</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember"><span class="remember">Remember Me</span></label>
-          </div>
-        
-          <div class="container" style="background-color:#F5F8F4">
-            <button type="button" class="cancelbtn"><a href="home.html">Cancel</a></button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-          </div>
-        </form>
-    </div>
-
-    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php'; ?>
-
+    <label for="rememberMeField">Remember Me</label>
+    <input type="checkbox" name="remember_me" id="rememberMeField">
+    <br>
+    <br>
+    <input type="submit" value="Log in" name="submit" class="btn btn-primary" id="submitbutton">
+  </form>
+</div>
+</div>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/footer.php'   ?>

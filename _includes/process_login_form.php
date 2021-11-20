@@ -8,7 +8,7 @@ include 'helper.php';
 
  if (empty($_POST) && isset($_POST)) {
     //Redirect if post is empty
-    redirectTo('/login.php');
+    redirectTo('/auth/login.php');
  }
 
 $emailField = isset($_POST['email']);
@@ -17,7 +17,7 @@ $passwordField = isset($_POST['password']);
 
 //Make sure required fields have values
 if (empty($emailField) || empty($passwordField) ) {
-    redirectTo('/login.php?errorMessage=Email or Password is Empty');
+    redirectTo('/auth/login.php?errorMessage=Email or Password is Empty');
 }
 
 ?>
