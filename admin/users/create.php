@@ -2,7 +2,7 @@
 $page_title = "Create";
 ?>
 
-<?php include '../../_global/header.php'; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; ?>
 
 <?php
 // Form has been submitted
@@ -45,6 +45,15 @@ if (isset($_POST['submit'])) {
 <input type="text" value="" name="last_name">
 <br>
 <br>
+<label for="">Username</label>
+<input type="text" value="" name="username">
+<br>
+<br>
+<label for="">Password</label>
+<input type="password" value="" name="password">
+<br>
+<br>
+
 <label for="">Email</label>
 <input type="text" value="" name="email">
 <br>
@@ -58,8 +67,6 @@ if (isset($_POST['submit'])) {
 <br>
 <br>
 
-<label for="">Password</label>
-<input type="password" value="" name="password">
 
 <input class="button" name="submit" type="submit" id="submitbutton" value="Submit">
 
