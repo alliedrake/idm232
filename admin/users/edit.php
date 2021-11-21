@@ -15,6 +15,7 @@ if (isset($_POST['update'])) {
   $last_name = mysqli_real_escape_string($db_connection, $_POST['last_name']);
   $email = mysqli_real_escape_string($db_connection, $_POST['email']);
   $role = mysqli_real_escape_string($db_connection, $_POST['role']);
+  $username = mysqli_real_escape_string($db_connection, $_POST['username']);
   $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
   // Build Query
@@ -23,7 +24,8 @@ if (isset($_POST['update'])) {
   $query .= "first_name = '{$first_name}', ";
   $query .= "last_name = '{$last_name}', ";
   $query .= "email = '{$email}', ";
-  $query .= "role = '{$role}', ";
+  $query .= "username = '{$username}', ";
+  $query .= "role = '{$role}' ";
   $query .= "WHERE id = {$user_id}";
 
   // Execute Query
@@ -75,6 +77,10 @@ if (isset($_POST['update'])) {
     value="<?php echo $user['last_name']; ?>"
     name="last_name">
 
+  <label for="">Username</label>
+  <input type="text"
+    value="<?php echo $user['username']; ?>"
+    name="username">
 
   <label for="">Email</label>
   <input type="email"
