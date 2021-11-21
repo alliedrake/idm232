@@ -2,8 +2,8 @@
 $page_title = "Recipe";
 ?>
 
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; ?>
 
-<?php include '../../_global/header.php'; ?>
 
 <div class="searchheader">
             <h1>All Recipes</h1>
@@ -31,10 +31,10 @@ $page_title = "Recipe";
                   <h3>Banana Bread</h3>
                     <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
                   </div>
-                    <img src="images/chickenpiccata.png">
+                    <img src="../../dist/images/chickenpiccata.png">
                     <div class="editdelete">
-                      <img src="images/edit.png" alt="edit">
-                      <img src="images/delete.png" alt="delete">
+                      <img src="../../dist/images/edit.png" alt="edit">
+                      <img src="../../dist/images/delete.png" alt="delete">
                     </div>
                 </div>
             </div>
@@ -47,10 +47,10 @@ $page_title = "Recipe";
                 <h3>Banana Bread</h3>
                   <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
                 </div>
-                  <img src="images/chickenpiccata.png">
+                  <img src="../../dist/images/chickenpiccata.png">
                   <div class="editdelete">
-                    <img src="images/edit.png" alt="edit">
-                    <img src="images/delete.png" alt="delete">
+                    <img src="../../dist/images/edit.png" alt="edit">
+                    <img src="../../dist/images/delete.png" alt="delete">
                   </div>
               </div>
           </div>
@@ -63,10 +63,10 @@ $page_title = "Recipe";
               <h3>Banana Bread</h3>
                 <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
               </div>
-                <img src="images/chickenpiccata.png">
+                <img src="../../dist/images/chickenpiccata.png">
                 <div class="editdelete">
-                  <img src="images/edit.png" alt="edit">
-                  <img src="images/delete.png" alt="delete">
+                  <img src="../../dist/images/edit.png" alt="edit">
+                  <img src="../../dist/images/delete.png" alt="delete">
                 </div>
             </div>
         </div>
@@ -79,19 +79,17 @@ $page_title = "Recipe";
             <h3>Banana Bread</h3>
               <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
             </div>
-              <img src="images/chickenpiccata.png">
+              <img src="../../dist/images/chickenpiccata.png">
           <div class="editdelete">
-            <img src="images/edit.png" alt="edit">
-            <img src="images/delete.png" alt="delete">
+            <img src="../../dist/images/edit.png" alt="edit">
+            <img src="../../dist/images/delete.png" alt="delete">
           </div>
           </div>
       </div>
         </div>
 
-      <div class="footer">
-        <a href="home.html"><img src="images/foodie.png" alt="banner"></a>
-      </div>
-      
-    </body>
-    </html>
+
+        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php'; ?>
+
+   
     
