@@ -14,7 +14,7 @@ $db_results = mysqli_query($db_connection, $query);
 ?>
 <div class="container">
     <div id="staff"><h1>Staff</h1></div>
-    <a class="button" href="create.php">Create</a>
+    <a class="button" href="create.php">Create New User</a>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/_components/alert.php'; ?>
 
 
