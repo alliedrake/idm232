@@ -23,17 +23,20 @@ if (isset($_GET['id'])) {
     redirectTo('/admin/users');
 }
 ?>
-<div class="container">
+<div class="viewcontainer">
     <h1><?php echo $user['first_name'] . ' ' . $user['last_name']; ; ?>
     </h1>
     <p>Username: <?php echo $user['username']; ?>
     </p>
     <p>Email: <?php echo $user['email']; ?>
     
-    <p><a class="btn btn-primary"
-            href="/admin/users/edit.php?id=<?php echo $user['id']; ?>">Edit</a>
-        <a class="btn btn-secondary"
-            href="/admin/users/delete.php?id=<?php echo $user['id']; ?>">Delete</a>
+    <div class='view'>
+    <p><a class="editbutton" href="/admin/users/edit.php?id=<?php echo $user['id']; ?>">Edit</a>
+
+        <a class="deletebutton" href="/admin/users/delete.php?id=<?php echo $user['id']; ?>">Delete</a>
     </p>
 </div>
+</div>
+
+
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/../_global/footer.php';

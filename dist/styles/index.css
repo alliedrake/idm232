@@ -322,6 +322,7 @@ a.button1:active{
 }
 
 .footer {
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -660,7 +661,7 @@ font-size: 0.8rem;
 }
 
 .container #submitbutton {
-  background-color: #DCE5D5;
+  background-color: #f2f2f2;
   color: #333333;
   padding: 14px 20px;
   margin: 8px 0;
@@ -669,6 +670,65 @@ font-size: 0.8rem;
   width: 100%;
   font-family:'Roboto-Bold';
 }
+
+.createbutton {
+  background-color: #DCE5D5;
+  color: #333333;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family:'Roboto-Bold';
+  margin-top: 5rem;
+  margin-left: 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.editbutton {
+  background-color: #f2f2f2;
+  color: #333333;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family:'Roboto-Bold';
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.viewcontainer {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Roboto'
+}
+
+
+.view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.deletebutton {
+  background-color: #db6a62;
+  color: #333333;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family:'Roboto-Bold';
+  text-decoration: none;
+  border-radius: 5px;
+}
+
 
 .container button {
   background-color: #DCE5D5;
