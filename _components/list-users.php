@@ -1,3 +1,5 @@
+<div class="table_container">
+
 <table>
     <thead>
       <tr>
@@ -7,7 +9,9 @@
       </tr>
     </thead>
     
+  
     <tbody>
+      
         <?php
           while ($row = mysqli_fetch_assoc($db_results)) {
               echo '<tr>';
@@ -18,4 +22,6 @@
           }
         ?>
     </tbody>
+        
   </table>
+        </div>

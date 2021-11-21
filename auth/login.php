@@ -35,22 +35,17 @@ if (isset($_POST['submit'])) {
                 'role' => $user['role'],
             ];
 
-            // echo '<pre>';
-            // var_dump($_SESSION);
-            // echo '</pre>';
-
-            redirectTo('/../admin');
-
+            redirectTo('/admin');
+            
         } else {
             
           // Correct email but wrong password
-
-            die('Password does not match');
-            redirectTo('/auth/login.php?error=Email or Password doest not exist.');
+            redirectTo('/auth/login.php?error=Email or Password does not exist.');
         }
+
     } else {
         // Wrong Email + Password
-        redirectTo('/auth/login.php?error=Email or Password doest not exist.');
+        redirectTo('/auth/login.php?error=Email or Password does not exist.');
     }
 
     // get form data
@@ -75,7 +70,7 @@ if (isset($_POST['submit'])) {
     <input type="checkbox" name="remember_me" id="rememberMeField">
     <br>
     <br>
-    <input type="submit" value="Log in" name="submit" class="btn btn-primary" id="submitbutton">
+    <input type="submit" value="Log in" name="submit" id="submitbutton">
   </form>
 </div>
 </div>

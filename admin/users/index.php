@@ -13,9 +13,12 @@ $query .= 'FROM users';
 $db_results = mysqli_query($db_connection, $query);
 ?>
 <div class="container">
-    <h1>Staff</h1>
+    <div id="staff"><h1>Staff</h1></div>
     <a class="button" href="create.php">Create</a>
     <?php include $_SERVER['DOCUMENT_ROOT'] . '/_components/alert.php'; ?>
+
+
+    <div class = "table_container">
 
     <?php
     // Check if the results returned anything
@@ -25,6 +28,7 @@ $db_results = mysqli_query($db_connection, $query);
         echo '<p>There are currently no users in the database</p>';
     }
     ?>
+</div>
 </div>
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';
 

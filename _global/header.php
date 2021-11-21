@@ -4,9 +4,21 @@
 session_start();
 
 
-require_once __DIR__ . '/../config.php';
-require_once __DIR__ . '/../_includes/database.php';
+// require_once __DIR__ . '/../config.php';
+// require_once __DIR__ . '/../_includes/database.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/_includes/database.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/_includes/helper.php';
 ?>
+
+
+<!-- <?php
+// if (isAdminPage() && isset !$_SESSION) {
+//  redirectTo('/');
+// }
+
+// ?> -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +37,8 @@ require_once __DIR__ . '/../_includes/database.php';
         <header>
 
             <div class="topnav">
-                <a class="active" href="home.php">Home</a>
+                <a href="<?php siteUrl('/home.php'); ?>">Home</a>
+        
                 <a href="categories.php">Categories</a>
                 <a href="../auth/login.php">Log In</a>
                 <div class="search-container">
@@ -35,6 +48,11 @@ require_once __DIR__ . '/../_includes/database.php';
                   </form>
                 </div>
               </div> 
+
+              <!-- <div class="topnav"> -->
+                
+                  <!-- <div id="elcome"><a href='profile'>Welcome, <?php //echo currentUser()['first_name']; ?></a></div> -->
+              <!-- </div> -->
         </header>
 
         <?php // main content starts here ?>

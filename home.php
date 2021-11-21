@@ -22,7 +22,7 @@
     <div class="main_content">
 
         <div class="featured1">
-        <a href="recipe.html"><img src="dist/images/stuffedsquash.png" alt="squash"></a>
+        <a href="recipe.php"><img src="dist/images/stuffedsquash.png" alt="squash"></a>
         <a href="recipe.php"><h3>Sausage and Pear Stuffed Acorn Squash</h3></a>
         </div>
         
@@ -60,7 +60,7 @@
 
     <div class="banner">
         <h2>Sign in to save and share recipes!</h2>
-        <a href="login.html" class="button1">Sign In</a>
+        <a href="/auth/login.php" class="button1">Sign In</a>
     </div>
 
     <div class="favorites">

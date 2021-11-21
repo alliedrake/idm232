@@ -2,14 +2,57 @@
 
 <?php
 
-include '../../_global/header.php'; ?>
+include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; ?>
+
+<?php
+
+if (isset($_POST['submit'])) {
+
+//Upload Image 
 
 
+
+//  Submit rest of the form
+$title = mysqli_real_escape_string($db_connection, $_POST['title']);
+$prep_time = mysqli_real_escape_string($db_connection, $_POST['prep_time']);
+$cook_time = mysqli_real_escape_string($db_connection, $_POST['cook_time']);
+$servings = mysqli_real_escape_string($db_connection, $_POST['servings']);
+$description = mysqli_real_escape_string($db_connection, $_POST['description']);
+$image = mysqli_real_escape_string($db_connection, $_POST['image']);
+$ingredients = mysqli_real_escape_string($db_connection, $_POST['ingredients']);
+$step_1 = mysqli_real_escape_string($db_connection, $_POST['step_1']);
+$step_2 = mysqli_real_escape_string($db_connection, $_POST['step_2']);
+$step_3 = mysqli_real_escape_string($db_connection, $_POST['step_3']);
+$step_4 = mysqli_real_escape_string($db_connection, $_POST['step_4']);
+$step_5 = mysqli_real_escape_string($db_connection, $_POST['step_5']);
+$step_6 = mysqli_real_escape_string($db_connection, $_POST['step_6']);
+
+
+$query = 'INSERT INTO add_recipes (title, prep_time, cook_time, servings, description, image, ingredients, step_1, step_2, step_3, step_4, step_5, step_6)';
+$query .= "VALUES ('{$title}', '{$prep_time}', '{$cook_time}', '{$servings}', '{$description}', '{$image}', '{$ingredients}', '{$step_1}','{$step_2}','{$step_3}', '{$step_4}', '{$step_5}', '{$step_6}')";
+
+
+
+$results = mysqli_query($db_connection, $query);
+if ($db_results && $db_results->num_rows > 0) {
+    // Success
+    redirectTo('/admin/recipes/');
+} else {
+    // Error
+    redirectTo('/admin/recipes/index.php?error=' . mysqli_error($db_connection));
+}
+}
+
+?>
+
+
+
+<div class="container">
     <h2>Create Recipe</h2>
 
 
     <div class="recipeform">
-    <form action="/create_recipe.php" method="POST">
+    <form action="" method="POST" enctype='multipart/form-data'>
 
         <label for="">Recipe Title</label>
         <input type="text" value="" name="title">
@@ -40,10 +83,12 @@ include '../../_global/header.php'; ?>
 
         <br>
         <br>
+        <br>
 
         <label for="">Image</label>
-        <input type="text" value="" name="image">
+        <input type="file" value="" name="image">
 
+        <br>
         <br>
         <br>
 
@@ -92,6 +137,6 @@ include '../../_global/header.php'; ?>
 <div class="addrecipesubmit">
     <button type="submit">Add Recipe</button>
 </div>
+</div>
 
-
-    <?php include '../_global/footer.php'; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php'; ?>

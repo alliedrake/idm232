@@ -56,7 +56,7 @@ if (isset($_POST['update'])) {
 }
 ?>
 <div class="container">
-  <h1>Create User</h1>
+  <h1>Edit User</h1>
   <?php include $_SERVER['DOCUMENT_ROOT'] . '/_components/alert.php'; ?>
   <form action="" method="POST">
 

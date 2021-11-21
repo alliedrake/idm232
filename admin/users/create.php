@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
     $query .= "VALUES ('{$first_name}', '{$last_name}', '{$role}', '{$email}', '{$username}', '{$password}')";
 
     // Execute Query
-    $db_results = mysqli_query($db_connection, $query);
+    $results = mysqli_query($db_connection, $query);
     if ($db_results && $db_results->num_rows > 0) {
         // Success
         redirectTo('/admin/users/index.php');

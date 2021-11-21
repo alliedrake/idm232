@@ -16,7 +16,7 @@ $page_title = "Recipe";
         </div>
 
         <div class="addrecipebutton">
-          <button type="submit"><a href="/admin/recipes/create_recipe.php">Add New Recipe</a></button>
+          <button type="submit"><a href="/admin/recipes/create.php">Add New Recipe</a></button>
         </div>
 
         
