@@ -38,9 +38,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/_includes/helper.php';
 
             <div class="topnav">
                 <a href="<?php siteUrl('/home.php'); ?>">Home</a>
-        
-                <a href="categories.php">Categories</a>
-                <a href="../auth/login.php">Log In</a>
+                <a href="<?php siteUrl('/categories.php'); ?>">Categories</a>
+                <a href="<?php siteUrl('/auth/login.php'); ?>">Log In</a>
                 <div class="search-container">
                   <form action="search.php">
                     <input type="text" placeholder="Search.." name="search">
@@ -51,8 +50,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/_includes/helper.php';
 
               <!-- <div class="topnav"> -->
                 
-                  <!-- <div id="elcome"><a href='profile'>Welcome, <?php //echo currentUser()['first_name']; ?></a></div> -->
-              <!-- </div> -->
+                  <!-- <div id="welcome"><a href='profile'>Welcome, <?php //echo currentUser()['first_name']; ?></a></div> -->
+              </div>
         </header>
 
         <?php // main content starts here ?>
