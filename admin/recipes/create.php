@@ -6,9 +6,52 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; ?>
 
 <?php
 
-if (isset($_POST['submit'])) {
-
 //Upload Image 
+
+if (isset($_POST['submit'])) {
+    // Parse Data
+    $file_name = slugify($_FILES['image']['name']);
+    $temp_name = $_FILES['image']['tmp_name'];
+
+    // dist/uploads/image-name.png
+    $file_path = $app['asset_url'] . $file_name;
+
+    // idm232/public_html/ + dist/uploads/image-name.png
+    $file_destination = $_SERVER['DOCUMENT_ROOT'] . $file_path;
+    $current_date = getFormattedDateTime();
+
+    // Build Query
+    $query = 'INSERT INTO files (file_path, file_title, date_created)';
+    $query .= "VALUES ('{$file_path}', '{$file_name}')";
+  
+    // Execute Query
+    $db_results = mysqli_query($db_connection, $query);
+    $new_uploaded_file_id = null;
+    if ($db_results) {
+        // file was inserted into the db
+        if (move_uploaded_file($temp_name, $file_destination)) {
+            // File was uploaded successfully
+
+            // Build Query to get the recently uploaded image and get that ID
+            $query = 'SELECT * ';
+            $query .= 'FROM files ';
+            $query .= "WHERE file_path='{$file_path}'";
+  
+            $db_results = mysqli_query($db_connection, $query);
+            if ($db_results) {
+                // Get row from results and assign to $user variable;
+                $new_uploaded_file_id = mysqli_fetch_assoc($db_results)['id'];
+            } else {
+                redirectTo('/admin/services/create.php?error=Could not find image in database');
+            }
+        } else {
+            redirectTo('/admin/services/create.php?error=Error moving file');
+        }
+    } else {
+        // Error
+        redirectTo('/admin/services/create.php?error=' . mysqli_error($db_connection));
+    }
+
 
 
 
