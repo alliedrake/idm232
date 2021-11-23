@@ -54,7 +54,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/header.php'; ?>
                   <h3>Banana Bread</h3>
                     <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
                   </div>
-                    <img src="images/chickenpiccata.png">
+                    <img src="dist/images/chickenpiccata.png">
                 </div>
                 <hr>
 
@@ -64,7 +64,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/header.php'; ?>
                   <h3>Banana Bread</h3>
                     <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
                   </div>
-                    <img src="images/chickenpiccata.png">
+                    <img src="dist/images/chickenpiccata.png">
                 </div>
                 <hr>
           
@@ -74,7 +74,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/header.php'; ?>
                 <h3>Banana Bread</h3>
                   <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
                 </div>
-                  <img src="images/chickenpiccata.png">
+                  <img src="dist/images/chickenpiccata.png">
               </div>
               <hr>
           
@@ -84,7 +84,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/header.php'; ?>
               <h3>Banana Bread</h3>
                 <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
               </div>
-                <img src="images/chickenpiccata.png">
+                <img src="dist/images/chickenpiccata.png">
             </div>
             <hr>
 
@@ -92,10 +92,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/header.php'; ?>
           </div>
 
     
-<div class="footer">
-  <a href="home.php"><img src="images/foodie.png" alt="banner"></a>
-</div>
-
+  
+          <?php include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/footer.php'   ?>
 </body>
 </html>
           
