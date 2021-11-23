@@ -32,7 +32,7 @@ $db_results = mysqli_query($db_connection, $query);
     ?>
 </div>
 </div>
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';?>
 
 
 

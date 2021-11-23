@@ -2,8 +2,7 @@
 
 <?php
 
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; 
-?>
+include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; ?>
 <?php
 //Upload Image 
 

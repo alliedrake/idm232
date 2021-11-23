@@ -54,4 +54,4 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/_includes/helper.php';
               </div>
         </header>
 
-        <?php // main content starts here ?>
+      

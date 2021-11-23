@@ -106,4 +106,4 @@ if (isset($_POST['update'])) {
 </div>
 
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';?>
