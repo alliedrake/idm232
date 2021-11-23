@@ -1,7 +1,7 @@
 
 <?php $page_title = "RECIPE"; ?>
 
-<?php include '_global/header.php'; ?>
+<?php require_once __DIR__  . '/_global/header.php';?>
 
 <div class="recipe-container">
 
@@ -93,7 +93,7 @@
 </div>
 </div>
 
-<?php include '_global/footer.php'; ?>
+<?php require_once __DIR__  . '/_global/footer.php';?>
 
 </body>
 </html>

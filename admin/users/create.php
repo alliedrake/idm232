@@ -2,7 +2,7 @@
 $page_title = "Create";
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; ?>
+<?php require_once __DIR__  . '/../../_global/header.php';?>
 
 <?php
 // Form has been submitted
@@ -72,5 +72,8 @@ if (isset($_POST['submit'])) {
 
 </div>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php'; ?>
+<?php require_once __DIR__  . '/../../_global/footer.php';?>
+
+</body>
+</html>
 

@@ -1,8 +1,9 @@
 
 <?php $page_title = "LOG IN"; ?>
 
-    <?php
-include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/header.php';
+  <?php require_once __DIR__  . '/../_global/header.php';?>
+
+  <?php
 
 if (isset($_POST['submit'])) {
     // check if the username and password is valid
@@ -74,4 +75,8 @@ if (isset($_POST['submit'])) {
   </form>
 </div>
 </div>
-<?php include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/footer.php'   ?>
+
+<?php require_once __DIR__  . '/../_global/footer.php';?>
+
+</body>
+</html>

@@ -1,7 +1,9 @@
 <?php
-$page_title = 'Delete User';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
+$page_title = 'Delete User';?>
 
+<?php require_once __DIR__  . '/../../_global/header.php';?>
+
+<?php 
 if (isset($_GET['id'])) {
     $user_id = $_GET['id'];
     // Build Query
@@ -24,3 +26,6 @@ if (isset($_GET['id'])) {
 ?>
 
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/../_global/footer.php';?>
+
+</body>
+</html>

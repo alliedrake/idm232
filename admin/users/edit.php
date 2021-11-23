@@ -1,6 +1,7 @@
 <?php
-$page_title = 'Edit User';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; ?>
+$page_title = 'Edit User';?>
+
+<?php require_once __DIR__  . '/../../_global/header.php';?>
 
 <?php
 
@@ -105,5 +106,7 @@ if (isset($_POST['update'])) {
 </form>
 </div>
 
+<?php require_once __DIR__  . '/../../_global/footer.php';?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';?>
+</body>
+</html>

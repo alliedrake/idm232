@@ -2,7 +2,7 @@
 $page_title = "Recipe";
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; ?>
+<?php include_once __DIR__ . '/../../_global/header.php'; ?>
 
 
 
@@ -108,7 +108,8 @@ $db_results = mysqli_query($db_connection, $query);
         </div> -->
 
 
-        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php'; ?>
+        <?php require_once __DIR__  . '/../../_global/footer.php';?>
 
-   
+  </body>
+  </html>
     

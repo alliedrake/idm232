@@ -1,6 +1,8 @@
 <?php
-$page_title = 'Edit Recipe';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; ?>
+$page_title = 'Edit Recipe';?>
+
+
+<?php require_once __DIR__  . '/../../_global/header.php';?>
 
 <?php
 
@@ -157,4 +159,7 @@ if (isset($_POST['update'])) {
 </div>
 
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php'; ?>
+<?php require_once __DIR__  . '/../../_global/footer.php';?>
+
+</body>
+</html>

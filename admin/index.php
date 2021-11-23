@@ -1,6 +1,7 @@
 <?php 
-$page_title = 'Dashboard';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';?>
+$page_title = 'Dashboard';?>
+
+<?php require_once __DIR__  . '/../_global/header.php';?>
 
 
 
@@ -14,4 +15,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';?>
 
 
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php';?>
+<?php require_once __DIR__  . '/../_global/footer.php';?>
+
+</body>
+</html>

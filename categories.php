@@ -2,7 +2,7 @@
 <?php $page_title = "CATEGORIES"; ?>
 
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/header.php'; ?>
+require_once __DIR__  . '/_global/header.php';?>
 
 
 <div class="categoryheader">
@@ -93,7 +93,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/header.php'; ?>
 
     
   
-          <?php include_once $_SERVER['DOCUMENT_ROOT'] .'/_global/footer.php'   ?>
+          <?php require_once __DIR__  . '/_global/footer.php';?>
 </body>
 </html>
           

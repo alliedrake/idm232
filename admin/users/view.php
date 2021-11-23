@@ -1,7 +1,9 @@
 <?php
-$page_title = 'Edit User';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php';
+$page_title = 'Edit User';?>
 
+<?php require_once __DIR__  . '/../../_global/header.php';?>
+
+<?php
 if (isset($_GET['id'])) {
     $user_id = $_GET['id'];
 
@@ -39,4 +41,7 @@ if (isset($_GET['id'])) {
 </div>
 
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/../_global/footer.php';?>
+<?php require_once __DIR__  . '/../../_global/footer.php';?>
+
+</body>
+</html>
