@@ -5,6 +5,7 @@ $page_title = "Recipe";
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; ?>
 
 
+
 <div class="searchheader">
             <h1>All Recipes</h1>
             <div id="alphabet"><h4>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</h4></div>
@@ -16,11 +17,29 @@ $page_title = "Recipe";
         </div>
 
         <div class="addrecipebutton">
-          <button type="submit"><a href="/admin/recipes/create.php">Add New Recipe</a></button>
+          <button type="submit"><a href="/admin/recipes/create_recipe.php">Add New Recipe</a></button>
         </div>
 
+
+
+<?php
+
+$query = 'SELECT * ';
+$query .= 'FROM add_recipes';
+$db_results = mysqli_query($db_connection, $query);
+
+
+    // Check if the results returned anything
+    if ($db_results && $db_results->num_rows > 0) {
+        include $_SERVER['DOCUMENT_ROOT'] . '/_components/list-recipes.php';
+    } else {
+        echo '<p>There are currently no recipes in the database</p>';
+    }
+    ?>
+
+
         
-        <div class="containerlist">
+        <!-- <div class="containerlist">
              
               
           <hr>
@@ -86,7 +105,7 @@ $page_title = "Recipe";
           </div>
           </div>
       </div>
-        </div>
+        </div> -->
 
 
         <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php'; ?>
