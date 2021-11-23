@@ -1054,6 +1054,14 @@ width: 15%;
   flex-direction: column;
 }
 
+.table_container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
 
 #staff h1 {
   padding-bottom: 1.5rem;
@@ -1069,8 +1077,15 @@ table {
   font-family: 'Roboto-Light';
   color:#333333;
   margin-bottom: 4rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
+
+table a {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
 table thead th,
 table tfoot th {
@@ -1085,3 +1100,12 @@ table td {
   padding: .5em;
   border: 1px solid lightgrey;
 }
+
+.viewcontainer p {
+  font-family: 'Roboto';
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 1rem;
+}
+
+
