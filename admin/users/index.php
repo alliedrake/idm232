@@ -12,6 +12,8 @@ $query = 'SELECT * ';
 $query .= 'FROM users';
 $db_results = mysqli_query($db_connection, $query);
 ?>
+
+
 <div class="container">
     <div id="staff"><h1>Staff</h1></div>
     <a class="button" href="create.php">Create New User</a>
