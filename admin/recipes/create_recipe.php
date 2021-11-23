@@ -1,113 +1,207 @@
+<?php $page_title = 'CREATE'; ?>
 
 <?php
 
-require_once __DIR__ . '/../../config.php';
-require_once __DIR__ . '/../database.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/header.php'; 
+?>
+<?php
+//Upload Image 
 
+// if (isset($_POST['submit'])) {
+//     // Parse Data
+//     // echo '<pre>';
+//     // var_dump($_FILES['image']);
+//     // echo '<pre>';
+//     // die;
 
-  $dbhost = "localhost";
-  $dbuser = "root";
-  $dbpass = "root";
-  $dbname = "idm232_publichtml";
-  $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+//     $file_name = slugify($_FILES['image']['name']);
+//     $temp_name = $_FILES['image']['tmp_name'];
 
+//     // dist/uploads/image-name.png
+//     $file_path = $app['asset_url'] . $file_name;
 
-  if (mysqli_connect_errno()) {
-    die ("Database connection failed: " .
-      mysqli_connect_error() .
-      " (" . mysqli_connect_errno() . ")"
-    );
-  }
+//     // idm232/public_html/ + dist/uploads/image-name.png
+//     $file_destination = $_SERVER['DOCUMENT_ROOT'] . $file_path;
+//     //$current_date = getFormattedDateTime();
 
+//     // Build Query
+//     $query = 'INSERT INTO files (file_path, file_title)';
+//     $query .= "VALUES ('{$file_path}', '{$file_name}')";
+  
+//     // Execute Query
+//     $results = mysqli_query($db_connection, $query);
+//     $new_uploaded_file_id = null;
 
-$user_id = "1";
-$title = "Squash";
-$prep_time = "20min";
-$cook_time = "25min";
-$servings = "two";
-$description = "this is squash";
-$image = "this is an image";
-$ingredients="these are the ingredients";
-$step_1 = "step one";
-$step_2 = "step two";
-$step_3 = "step three";
-$step_4 = "step four";
-$step_5 = "step five";
-$step_6 = "step six";
+//     if ($db_results) {
+//         // file was inserted into the db
+//         if (move_uploaded_file($temp_name, $file_destination)) {
+//             // File was uploaded successfully
 
-
-  $user_id = mysqli_real_escape_string($db_connection, $user_id);
-  $title = mysqli_real_escape_string($db_connection, $title);
-  $prep_time = mysqli_real_escape_string($db_connection, $prep_time);
-  $cook_time = mysqli_real_escape_string($db_connection, $cook_time);
-  $servings = mysqli_real_escape_string($db_connection, $servings);
-  $description = mysqli_real_escape_string($db_connection, $description);
-  $image = mysqli_real_escape_string($db_connection, $image); 
-  $ingredients = mysqli_real_escape_string($db_connection, $ingredients); 
-  $step_1 = mysqli_real_escape_string($db_connection, $step_1); 
-  $step_2 = mysqli_real_escape_string($db_connection, $step_2); 
-  $step_3 = mysqli_real_escape_string($db_connection, $step_3); 
-  $step_4 = mysqli_real_escape_string($db_connection, $step_4); 
-  $step_5 = mysqli_real_escape_string($db_connection, $step_5); 
-  $step_6 = mysqli_real_escape_string($db_connection, $step_6); 
-
-
-
-  // Step 2: Preform Database Query
-  $query = "INSERT INTO add_recipes (user_id, title, prep_time, cook_time, servings, description, image, ingredients, step_1, step_2, step_3, step_4, step_5, step_6)
-  VALUES ('{$user_id}', '{$title}', '{$prep_time}', '{$cook_time}', '{$servings}', '{$description}', '{$image}', '{$ingredients}', '{$step_1}','{$step_2}', '{$step_3}', '{$step_4}', '{$step_5}', '{$step_6}')";
-  $result = mysqli_query($db_connection, $query);
-
+//             // Build Query to get the recently uploaded image and get that ID
+//             $query = 'SELECT * ';
+//             $query .= 'FROM files ';
+//             $query .= "WHERE file_path='{$file_path}'";
+  
+//             $results = mysqli_query($db_connection, $query);
+//             if ($db_results) {
+//                 // Get row from results and assign to $user variable;
+//                 $new_uploaded_file_id = mysqli_fetch_assoc($db_results)['id'];
+//             } else {
+//                 redirectTo('/admin/recipes/create.php?error=Could not find image in database');
+//             }
+//         } else {
+//             redirectTo('/admin/recipes/create.php?error=Error moving file');
+//         }
+//     } else {
+//         // Error
+//         redirectTo('/admin/recipes/create.php?error=' . mysqli_error($db_connection));
+//     }
 
 
 
-// Check there are no errors with our SQL statement
-if ($result) {
+?>
+
+<?php
+
+
+if (isset($_POST['submit'])) {
+
+//  Submit rest of the form
+$title = mysqli_real_escape_string($db_connection, $_POST['title']);
+$prep_time = mysqli_real_escape_string($db_connection, $_POST['prep_time']);
+$cook_time = mysqli_real_escape_string($db_connection, $_POST['cook_time']);
+$servings = mysqli_real_escape_string($db_connection, $_POST['servings']);
+$description = mysqli_real_escape_string($db_connection, $_POST['description']);
+$image = mysqli_real_escape_string($db_connection, $_POST['image']);
+$ingredients = mysqli_real_escape_string($db_connection, $_POST['ingredients']);
+$step_1 = mysqli_real_escape_string($db_connection, $_POST['step_1']);
+$step_2 = mysqli_real_escape_string($db_connection, $_POST['step_2']);
+$step_3 = mysqli_real_escape_string($db_connection, $_POST['step_3']);
+$step_4 = mysqli_real_escape_string($db_connection, $_POST['step_4']);
+$step_5 = mysqli_real_escape_string($db_connection, $_POST['step_5']);
+$step_6 = mysqli_real_escape_string($db_connection, $_POST['step_6']);
+$file_id = mysqli_real_escape_string($db_connection, $_POST['file_id']);
+
+
+$query = 'INSERT INTO add_recipes (title, prep_time, cook_time, servings, description, image, ingredients, step_1, step_2, step_3, step_4, step_5, step_6, file_id)';
+$query .= "VALUES ('{$title}', '{$prep_time}', '{$cook_time}', '{$servings}', '{$description}', '{$image}', '{$ingredients}', '{$step_1}','{$step_2}','{$step_3}', '{$step_4}', '{$step_5}','{$step_6}','1')";
+
+
+
+$results = mysqli_query($db_connection, $query);
+
+
+// if ($db_results) {
+//     // Success
+//     // redirect_to("somepage.php");
+//     echo "Success!";
+//   } else {
+//     die ("Database query failed. " . mysqli_error($db_connection));
+//   }
+
+
+
+if ($db_results && $db_results->num_rows > 0) {
     // Success
-    // redirect_to("somepage.php");
-    echo "Success!";
-  } else {
-    die ("Database query failed. " . mysqli_error($connection));
-  }
+    redirectTo('/admin/recipes/');
+} else {
+    // Error
+    redirectTo('/admin/recipes/index.php?error=' . mysqli_error($db_connection));
+}
+}
+
+?>
 
 
 
+<div class="container">
+    <h2>Create Recipe</h2>
 
 
-// OLD CODE
-//INSERT INTO `add_recipes`(`user_id`, `title`, `prep_time`, `cook_time`, `servings`, `description`, `image`, `ingredients`, `step_1`, `step_2`, `step_3`, `step_4`, `step_5`, `step_6`) 
-//VALUES ('1','food','30min','40min','two','description','image','ingredients','step','step','step','step','step','step')
+    <div class="recipeform">
+    <form action="" method="POST" enctype='multipart/form-data'>
+
+        <label for="">Recipe Title</label>
+        <input type="text" value="" name="title">
+
+        <br>
+        <br>
+
+        <label for="">Prep Time</label>
+        <input type="text" value="" name="prep_time">
+
+        <br>
+        <br>
+
+        <label for="">Cook Time</label>
+        <input type="text" value="" name="cook_time">
+
+        <br>
+        <br>
+
+        <label for="">Servings</label>
+        <input type="text" value="" name="servings">
+
+        <br>
+        <br>
+
+        <label for="">Description</label>
+        <input type="text" value="" name="description">
+
+        <br>
+        <br>
+        <br>
+
+        <label for="">Image</label>
+        <input type="file" value="" name="image">
+
+        <br>
+        <br>
+        <br>
+
+        <label for="">Ingredients</label>
+        <input type="text" value="" name="ingredients">
+
+        <br>
+        <br>
+
+        <label for="">Step 1</label>
+        <input type="text" value="" name="step_1">
+
+        <br>
+        <br>
+
+        <label for="">Step 2</label>
+        <input type="text" value="" name="step_2">
+
+        <br>
+        <br>
+
+        <label for="">Step 3</label>
+        <input type="text" value="" name="step_3">
+
+        <br>
+        <br>
+
+        <label for="">Step 4</label>
+        <input type="text" value="" name="step_4">
+
+        <br>
+        <br>
+
+        <label for="">Step 5</label>
+        <input type="text" value="" name="step_5">
+
+        <br>
+        <br>
+        
+        <label for="">Step 6</label>
+        <input type="text" value="" name="step_6">
+
+        <br>
 
 
-// $query = "INSERT INTO `add_recipes` (`user_id`, `title`, `prep_time`, `cook_time`, `servings`, `description`, `image`, `ingredients`, `step_1`, `step_2`, `step_3`, `step_4`, `step_5`, `step_6')";
-// $query .= VALUES (`2`,`food`,`30min`,`40min`,`two`,`description`,`image`,`ingredients`,`step`,`step`,`step`,`step`,`step`,`step`);
+        <input class="button" name="submit" type="submit" id="submitbutton" value="Submit">
+</div>
 
-
-//$db_connection->query($query);
-
-// $query = "SELECT * FROM add_recipes";
-//   $result = mysqli_query($db_connection, $query);
-
-// if (!$result) {
-//     die ("Database query failed.");
-// }
-
-
-
-//     // Step 3: Use Returned Data
-//     echo "<pre>";
-//     while ($row = mysqli_fetch_row($result)) {
-//       var_dump($row);
-//       echo "<hr>";
-//    
-//     echo "</pre>"; 
-
-//   
-//     // Step 4: Release Returned Data
-//     mysqli_free_result($result);
-//   
-
-//   
-//     // Step 5: Close Database Connection
-//     mysqli_close($connection);
-
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/_global/footer.php'; ?>
