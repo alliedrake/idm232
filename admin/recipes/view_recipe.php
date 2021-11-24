@@ -41,6 +41,7 @@ if (isset($_GET['id'])) {
 
     <a class="deletebutton" href="<?php siteUrl('/admin/recipes/delete_recipe.php?id=')?><?php echo $recipe['id'];?>">Delete</a>
 </div>
+</div>
         
 
 <?php require_once __DIR__  . '/../../_global/footer.php';?>

@@ -16,7 +16,7 @@ function siteUrl($path = '')
 
 function redirectTo($path)
 {
-    header('Location:' . $path);
+    //header('Location:' . $path);
 }
 
 /**
