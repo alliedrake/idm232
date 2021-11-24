@@ -84,7 +84,7 @@ if (isset($_POST['update'])) {
 
 <div class="container">
 <h1>Edit Recipe</h1>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/_components/alert.php'; ?>
+<?php include __DIR__ . '/../../_components/alert.php'; ?>
 <form action="" method="POST">
 
   <label for="">Recipe Title</label>

@@ -35,8 +35,8 @@ if (isset($_GET['id'])) {
     <div class='view'>
     <p><a class="editbutton" href="/admin/users/edit.php?id=<?php echo $user['id']; ?>">Edit</a>
 
-        <a class="deletebutton" href="/admin/users/delete.php?id=<?php echo $user['id']; ?>">Delete</a>
-    </p>
+        <a class="deletebutton" href="/admindelete.php?id=<?php echo $user['id']; ?>">Delete</a>
+    </p> 
 </div>
 </div>
 

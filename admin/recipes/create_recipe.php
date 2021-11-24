@@ -87,7 +87,7 @@ $query .= "VALUES ('{$title}', '{$prep_time}', '{$cook_time}', '{$servings}', '{
 
 
 
-$results = mysqli_query($db_connection, $query);
+$db_results = mysqli_query($db_connection, $query);
 
 
 // if ($db_results) {

@@ -9,9 +9,12 @@
 
 function siteUrl($path = '')
 {
-    $url = 'http://' . $_SERVER['SERVER_NAME'] ;
+    global $app;
+    $url = $app['url'];
     echo $url . $path;
 }
+
+
 
 /**
  * Snippet to redirect to a page
@@ -65,4 +68,3 @@ function isAdminPage()
 //     return;
 // }
 
-}

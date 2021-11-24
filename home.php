@@ -1,14 +1,17 @@
 
+
 <?php $page_title = "HOME"; ?>
 
-<?php require_once __DIR__  . '/_global/header.php';?>
 
+<?php require_once __DIR__  . '/_global/header.php';?>
     
 <div class="image_container">
 
 
     <!--<div class="centered"><h1>Explore Recipes</h1></div> -->
     <img src="dist/images/homeimage.png" alt="headerimage" class="header_image" style="width:100%;"> 
+
+    <!--<a href=" <?php echo $app['url']; ?>/recipes/create.php">Create</a> -->
 
 
     </div>
@@ -98,11 +101,7 @@
         </div>
     </div>
 
-    <!--<div class="footer">
-        <a href="home.html"><img src="dist/images/foodie.png" alt="banner"></a>
-    </div>
 
--->
 
 <?php require_once __DIR__  . '/_global/footer.php';?>
 

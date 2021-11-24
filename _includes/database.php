@@ -16,5 +16,4 @@ if (!$db_connection) {
     exit();
 }
 
-mysqli_close($connection);
 ?>

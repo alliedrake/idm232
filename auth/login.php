@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
 <div class="logincontainer">
   <div class="container">
   <h1>Login</h1>
-  <?php include $_SERVER['DOCUMENT_ROOT'] . '/_components/alert.php'; ?>
+  <?php include __DIR__ . '/../_components/alert.php'; ?>
   <form action="" method="post">
     <label for="emailField">Email</label>
     <input type="email" name="email" id="emailField" value="" required>

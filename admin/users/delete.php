@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
     if ($db_results) {
         redirectTo('/admin/users?success=User was deleted');
     } else {
-        redirectTo('admin/users/view.php?id=' . $_GET['id'] . '&error=' . mysqli_error($db_connection));
+        redirectTo('/admin/users/view.php?id=' . $_GET['id'] . '&error=' . mysqli_error($db_connection));
     }
 } else {
     // Redirect user if no ID is passed in URL
@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/../_global/footer.php';?>
+<?php include_once __DIR__ . '/../../_global/footer.php';?>
 
 </body>
 </html>
