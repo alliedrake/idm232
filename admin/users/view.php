@@ -33,10 +33,10 @@ if (isset($_GET['id'])) {
     <p>Email: <?php echo $user['email']; ?>
     
     <div class='view'>
-    <p><a class="editbutton" href="/admin/users/edit.php?id=<?php echo $user['id']; ?>">Edit</a>
+    <a class="editbutton" href="<?php siteUrl('/admin/users/edit.php?id=')?><?php echo $user['id'];?>">Edit</a>
 
-        <a class="deletebutton" href="/admindelete.php?id=<?php echo $user['id']; ?>">Delete</a>
-    </p> 
+    <a class="deletebutton" href="<?php siteUrl('/admin/users/delete.php?id=')?><?php echo $user['id'];?>">Delete</a>
+     
 </div>
 </div>
 

@@ -14,17 +14,9 @@ function siteUrl($path = '')
     echo $url . $path;
 }
 
-
-
-/**
- * Snippet to redirect to a page
- *
- * @param string $url
- * @return void
- */
 function redirectTo($path)
 {
-    header('Location: ' . $path);
+    header('Location:' . $path);
 }
 
 /**

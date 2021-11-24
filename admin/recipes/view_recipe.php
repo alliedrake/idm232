@@ -37,12 +37,11 @@ if (isset($_GET['id'])) {
     <p>Servings: <?php echo $recipe['servings']; ?>
     
     <div class='view'>
-    <p><a class="editbutton" href="/admin/recipes/edit_recipe.php?id=<?php echo $recipe['id']; ?>">Edit</a>
+    <a class="editbutton" href="<?php siteUrl('/admin/recipes/edit_recipe.php?id=')?><?php echo $recipe['id'];?>">Edit</a>
 
-        <a class="deletebutton" href="/admin/recipes/delete_recipe.php?id=<?php echo $recipe['id']; ?>">Delete</a>
-    </p>
+    <a class="deletebutton" href="<?php siteUrl('/admin/recipes/delete_recipe.php?id=')?><?php echo $recipe['id'];?>">Delete</a>
 </div>
-
+        
 
 <?php require_once __DIR__  . '/../../_global/footer.php';?>
 

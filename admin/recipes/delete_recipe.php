@@ -1,5 +1,4 @@
-<?php
-$page_title = 'Delete Recipe';?>
+<?php $page_title = 'Delete Recipe';?>
 
 <?php require_once __DIR__  . '/../../_global/header.php';?>
 

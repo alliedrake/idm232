@@ -328,6 +328,7 @@ a.button1:active{
   align-items: center;
   background-color: #DCE5D5;
   height: 20%;
+  width: 100%;
 }
 
 .footer img {
