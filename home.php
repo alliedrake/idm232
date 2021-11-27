@@ -41,19 +41,19 @@
         <div class='recipes1'>
 
         <div class="firstfeature">
-            <img src="dist/images/chickenpiccata.png">
-            <h3>Chicken Picatta</h3>
+            <img src="dist/images/bananabread.jpg">
+            <h3>Banana Bread</h3>
 
         </div>
 
         <div class="secondfeature">
-            <img src="dist/images/chickenpiccata.png">
-            <h3>Chicken Picatta</h3>
+            <img src="dist/images/macncheese.jpg">
+            <h3>Baked Mac n Cheese</h3>
         </div>
 
         <div class="thirdfeature">
-            <img src="dist/images/chickenpiccata.png">
-            <h3>Chicken Picatta</h3>
+            <img src="dist/images/chickenpotpie.jpg">
+            <h3>Chicken Pot Pie</h3>
         </div>
         </div>
     </div>

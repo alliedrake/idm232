@@ -159,7 +159,10 @@ if (isset($_POST['update'])) {
 </div>
 
 
-<?php require_once __DIR__  . '/../../_global/footer.php';?>
+<div class="footer">
+    <a href="<?php siteUrl('/home.php'); ?>"><img src="../../dist/images/foodie.png" alt="banner"></a>
+</div>
+
 
 </body>
 </html>
