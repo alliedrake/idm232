@@ -1062,6 +1062,13 @@ width: 15%;
   flex-direction: column;
 }
 
+.table_container table {
+  border: 3px solid #DCE5D5;
+}
+
+.table_container th {
+  border-bottom: 3px solid #DCE5D5;
+}
 
 
 #staff h1 {
@@ -1072,7 +1079,6 @@ table {
   margin-top: 4rem;
   color: #333;
   background: white;
-  border: 1px solid grey;
   font-size: 12pt;
   border-collapse: collapse;
   font-family: 'Roboto-Light';
@@ -1086,20 +1092,29 @@ table {
 table a {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  color: #333333;
 }
 
 table thead th,
 table tfoot th {
   color: #777;
-  background: rgba(0,0,0,.1);
+  background: #F5F8F4;
+  border-bottom: none;
 }
+
+
 table caption {
   padding:.5em;
 }
+
 table th,
 table td {
-  padding: .5em;
-  border: 1px solid lightgrey;
+  padding: 2rem;
+  background-color: #FCFFFA;
+}
+
+th, td {
+  border-bottom: 2px solid #DCE5D5;
 }
 
 .viewcontainer p {

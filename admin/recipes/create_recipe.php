@@ -2,112 +2,112 @@
 
 
 <?php require_once __DIR__  . '/../../_global/header.php';?>
+<?php require_once __DIR__  . '/../../_includes/functions.php';?>
 
 <?php
 //Upload Image 
 
-// if (isset($_POST['submit'])) {
-//     // Parse Data
-//     // echo '<pre>';
-//     // var_dump($_FILES['image']);
-//     // echo '<pre>';
-//     // die;
+if (isset($_POST['submit'])) {
+    //Parse Data
+    // echo '<pre>';
+    // var_dump($_FILES['image']);
+    // echo '<pre>';
+    // die;
 
-//     $file_name = slugify($_FILES['image']['name']);
-//     $temp_name = $_FILES['image']['tmp_name'];
+    $file_title = slugify($_FILES['image']['name']);
+    $temp_name = $_FILES['image']['tmp_name'];
 
-//     // dist/uploads/image-name.png
-//     $file_path = $app['asset_url'] . $file_name;
+    // dist/uploads/image-name.png
+    $file_path = $app['asset_url'] . $file_title;
 
-//     // idm232/public_html/ + dist/uploads/image-name.png
-//     $file_destination = $_SERVER['DOCUMENT_ROOT'] . $file_path;
-//     //$current_date = getFormattedDateTime();
+    // idm232/public_html/ + dist/uploads/image-name.png
+    $file_destination = __DIR__ . "/../.." . $file_path;
+
 
 //     // Build Query
-//     $query = 'INSERT INTO files (file_path, file_title)';
-//     $query .= "VALUES ('{$file_path}', '{$file_name}')";
+    $query = 'INSERT INTO files (file_path, file_title) ';
+    $query .= "VALUES ('{$file_path}', '{$file_title}')";
   
+   
+    
+
 //     // Execute Query
-//     $results = mysqli_query($db_connection, $query);
-//     $new_uploaded_file_id = null;
+    $db_results = mysqli_query($db_connection, $query);
+    $new_uploaded_file_id = null;
+    
+    
+    if ($db_results) {
+        // file was inserted into the db
+        
+        if (move_uploaded_file($temp_name, $file_destination)) {
+            // File was uploaded successfully
+            
 
-//     if ($db_results) {
-//         // file was inserted into the db
-//         if (move_uploaded_file($temp_name, $file_destination)) {
-//             // File was uploaded successfully
-
-//             // Build Query to get the recently uploaded image and get that ID
-//             $query = 'SELECT * ';
-//             $query .= 'FROM files ';
-//             $query .= "WHERE file_path='{$file_path}'";
+            // Build Query to get the recently uploaded image and get that ID
+            $query = 'SELECT * ';
+            $query .= 'FROM files ';
+            $query .= "WHERE file_path='{$file_path}'";
   
-//             $results = mysqli_query($db_connection, $query);
-//             if ($db_results) {
-//                 // Get row from results and assign to $user variable;
-//                 $new_uploaded_file_id = mysqli_fetch_assoc($db_results)['id'];
-//             } else {
-//                 redirectTo('/admin/recipes/create.php?error=Could not find image in database');
-//             }
-//         } else {
-//             redirectTo('/admin/recipes/create.php?error=Error moving file');
-//         }
-//     } else {
-//         // Error
-//         redirectTo('/admin/recipes/create.php?error=' . mysqli_error($db_connection));
-//     }
+            $db_results = mysqli_query($db_connection, $query);
+            if ($db_results) {
+                // Get row from results and assign to $user variable;
+                $new_uploaded_file_id = mysqli_fetch_assoc($db_results)['id'];
+            } else {
+                redirectTo('/admin/recipes/create.php?error=Could not find image in database');
+            }
+        } else {
+            redirectTo('/admin/recipes/create.php?error=Error moving file');
+        }
+    } else {
+        // Error
+        redirectTo('/admin/recipes/create.php?error=' . mysqli_error($db_connection));
+    }
 
-
+}
 
 ?>
 
 <?php
 
 
-if (isset($_POST['submit'])) {
+// if (isset($_POST['submit'])) {
 
-//  Submit rest of the form
-$title = mysqli_real_escape_string($db_connection, $_POST['title']);
-$prep_time = mysqli_real_escape_string($db_connection, $_POST['prep_time']);
-$cook_time = mysqli_real_escape_string($db_connection, $_POST['cook_time']);
-$servings = mysqli_real_escape_string($db_connection, $_POST['servings']);
-$description = mysqli_real_escape_string($db_connection, $_POST['description']);
-$image = mysqli_real_escape_string($db_connection, $_POST['image']);
-$ingredients = mysqli_real_escape_string($db_connection, $_POST['ingredients']);
-$step_1 = mysqli_real_escape_string($db_connection, $_POST['step_1']);
-$step_2 = mysqli_real_escape_string($db_connection, $_POST['step_2']);
-$step_3 = mysqli_real_escape_string($db_connection, $_POST['step_3']);
-$step_4 = mysqli_real_escape_string($db_connection, $_POST['step_4']);
-$step_5 = mysqli_real_escape_string($db_connection, $_POST['step_5']);
-$step_6 = mysqli_real_escape_string($db_connection, $_POST['step_6']);
-$file_id = mysqli_real_escape_string($db_connection, $_POST['file_id']);
-
-
-$query = 'INSERT INTO add_recipes (title, prep_time, cook_time, servings, description, image, ingredients, step_1, step_2, step_3, step_4, step_5, step_6, file_id)';
-$query .= "VALUES ('{$title}', '{$prep_time}', '{$cook_time}', '{$servings}', '{$description}', '{$image}', '{$ingredients}', '{$step_1}','{$step_2}','{$step_3}', '{$step_4}', '{$step_5}','{$step_6}','1')";
+// //  Submit rest of the form
+// $title = mysqli_real_escape_string($db_connection, $_POST['title']);
+// $prep_time = mysqli_real_escape_string($db_connection, $_POST['prep_time']);
+// $cook_time = mysqli_real_escape_string($db_connection, $_POST['cook_time']);
+// $servings = mysqli_real_escape_string($db_connection, $_POST['servings']);
+// $description = mysqli_real_escape_string($db_connection, $_POST['description']);
+// $image = mysqli_real_escape_string($db_connection, $_POST['image']);
+// $ingredients = mysqli_real_escape_string($db_connection, $_POST['ingredients']);
+// $step_1 = mysqli_real_escape_string($db_connection, $_POST['step_1']);
+// $step_2 = mysqli_real_escape_string($db_connection, $_POST['step_2']);
+// $step_3 = mysqli_real_escape_string($db_connection, $_POST['step_3']);
+// $step_4 = mysqli_real_escape_string($db_connection, $_POST['step_4']);
+// $step_5 = mysqli_real_escape_string($db_connection, $_POST['step_5']);
+// $step_6 = mysqli_real_escape_string($db_connection, $_POST['step_6']);
+// $file_id = mysqli_real_escape_string($db_connection, $_POST['file_id']);
 
 
+// $query = 'INSERT INTO add_recipes (title, prep_time, cook_time, servings, description, image, ingredients, step_1, step_2, step_3, step_4, step_5, step_6, file_id)';
+// $query .= "VALUES ('{$title}', '{$prep_time}', '{$cook_time}', '{$servings}', '{$description}', '{$image}', '{$ingredients}', '{$step_1}','{$step_2}','{$step_3}', '{$step_4}', '{$step_5}','{$step_6}','1')";
 
-$db_results = mysqli_query($db_connection, $query);
 
 
-// if ($db_results) {
+// $db_results = mysqli_query($db_connection, $query);
+
+
+
+
+
+// if ($db_results && $db_results->num_rows > 0) {
 //     // Success
-//     // redirect_to("somepage.php");
-//     echo "Success!";
-//   } else {
-//     die ("Database query failed. " . mysqli_error($db_connection));
-//   }
-
-
-
-if ($db_results && $db_results->num_rows > 0) {
-    // Success
-    redirectTo('/admin/recipes/');
-} else {
-    // Error
-    redirectTo('/admin/recipes/index.php?error=' . mysqli_error($db_connection));
-}
-}
+//     redirectTo('/admin/recipes/');
+// } else {
+//     // Error
+//     redirectTo('/admin/recipes/index.php?error=' . mysqli_error($db_connection));
+// }
+// }
 
 ?>
 
