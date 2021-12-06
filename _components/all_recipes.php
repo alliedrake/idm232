@@ -13,7 +13,7 @@
 
     
   
-    <tbody>
+    <tbody id="recipe_list">
   
         <?php
           while ($row = mysqli_fetch_assoc($db_results)) {

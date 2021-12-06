@@ -35,8 +35,6 @@ $db_results = mysqli_query($db_connection, $query);
 
 
 
-
-
     // Check if the results returned anything
     if ($db_results && $db_results->num_rows > 0) {
         include __DIR__ . '/../../_components/list-recipes.php';

@@ -11,7 +11,6 @@
           <input type="text" placeholder="Search.." name="search">
                     <button type="submit">Search</button>
         </div>
-
     
 
 
@@ -39,7 +38,6 @@ $db_results = mysqli_query($db_connection, $query);
 
 
     ?>
-
 
 
 
