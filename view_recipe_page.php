@@ -44,7 +44,7 @@ if (isset($_GET['id'])) {
 </div>
 
 <div class="recipeimage">
-<p><img src=" <?php echo $recipe['file_path']; ?>"img width="600" alt=""></p>
+<p><img src=" <?php echo $recipe['file_path']; ?>"img width="800" alt=""></p>
 </div>
 
 <div class="text-container">

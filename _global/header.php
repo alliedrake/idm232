@@ -5,8 +5,14 @@ session_start();
 require_once __DIR__  . '/../config.php';
 require_once __DIR__  . '/../_includes/database.php';
 require_once __DIR__ . '/../_includes/helper.php';
+
 ?>
 
+<?php
+if (isAdminPage() && !isset($_SESSION['user'])) {
+    // Is on admin page and user does not exist
+    redirectTo('/');
+}?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,5 +43,7 @@ require_once __DIR__ . '/../_includes/helper.php';
             
               </div>
         </header>
+
+
 
       

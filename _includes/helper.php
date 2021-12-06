@@ -16,7 +16,7 @@ function siteUrl($path = '')
 
 function redirectTo($path)
 {
-    //header('Location:' . $path);
+    // header('Location:' . $path);
 }
 
 /**
@@ -50,13 +50,14 @@ function isAdminPage()
 }
 
 
-// function currentUser() 
-// {
-//     if (isset($_SESSION['user'])) {
-//         $user = $_SESSION['user'];
-//         return $user;
-//     } else {
+function currentUser() 
+{
+    if (isset($_SESSION['user'])) {
+        $user = $_SESSION['user'];
+        return $user;
+    } else {
 
-//     return;
-// }
+    return;
+}
+}
 

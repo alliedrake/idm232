@@ -369,7 +369,16 @@ a.button1:active{
   padding-top: 3rem;
 }
 
-.recipe_header h1, .ingredients h2{
+.recipe_header h1 {
+  padding-top: 0.5rem;
+  font-family: 'Roboto-Bold';
+  color: #333333;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  line-height: 2.6rem;
+}
+
+.ingredients h2 {
   padding-top: 0.5rem;
   font-family: 'Roboto-Bold';
   color: #333333;
@@ -377,6 +386,7 @@ a.button1:active{
   margin-right: 10px;
   line-height: 2.6rem;
 }
+
 
 .ingredients {
   padding-top: 2rem;

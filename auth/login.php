@@ -33,12 +33,12 @@ if (isset($_POST['submit'])) {
             // Create a user array in the SESSION variable and assign values to it
             
 
-            // $_SESSION['user'] = [
-            //     'id' => $user['id'],
-            //     'first_name' => $user['first_name'],
-            //     'last_name' => $user['last_name'],
-            //     'role' => $user['role'],
-            // ];
+            $_SESSION['user'] = [
+                'id' => $user['id'],
+                'first_name' => $user['first_name'],
+                'last_name' => $user['last_name'],
+                'role' => $user['role'],
+            ];
 
             redirectTo('/admin/index.php');
 
