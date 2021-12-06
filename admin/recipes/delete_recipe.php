@@ -1,6 +1,7 @@
 <?php $page_title = 'Delete Recipe';?>
 
 <?php require_once __DIR__  . '/../../_global/header.php';?>
+<?php require_once __DIR__  . '/../../_includes/functions.php';?>
 
 <?php
 if (isset($_GET['id'])) {

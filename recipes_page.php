@@ -1,12 +1,6 @@
-<?php
-$page_title = "Recipe";
-?>
+<?php $page_title = "RECIPES"; ?>
 
-<?php include_once __DIR__ . '/../../_global/header.php'; 
-
-?>
-
-
+<?php require_once __DIR__  . '/_global/header.php';?>
 
 <div class="searchheader">
             <h1>All Recipes</h1>
@@ -18,9 +12,7 @@ $page_title = "Recipe";
                     <button type="submit">Search</button>
         </div>
 
-        <div class="addrecipebutton">
-          <button type="submit"><a href="<?php siteUrl('/admin/recipes/create_recipe.php'); ?>">Add New Recipe</a></button>
-        </div>
+    
 
 
 
@@ -39,7 +31,7 @@ $db_results = mysqli_query($db_connection, $query);
 
     // Check if the results returned anything
     if ($db_results && $db_results->num_rows > 0) {
-        include __DIR__ . '/../../_components/list-recipes.php';
+        include __DIR__ . '/_components/all_recipes.php';
     } else {
         echo '<p>There are currently no recipes in the database</p>';
     }
@@ -49,13 +41,21 @@ $db_results = mysqli_query($db_connection, $query);
     ?>
 
 
-      
-
-<div class="footer">
-    <a href="<?php siteUrl('/home.php'); ?>"><img src="../../dist/images/foodie.png" alt="banner"></a>
-</div>
 
 
-  </body>
-  </html>
-    
+
+
+
+
+
+
+
+
+
+
+
+<?php require_once __DIR__  . '/_global/footer.php';?>
+
+</body>
+</html>
+

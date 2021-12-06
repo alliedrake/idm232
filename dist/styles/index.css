@@ -338,6 +338,8 @@ a.button1:active{
 }
 
 
+
+
 /* RECIPE PAGE */
 
 .recipeicons {
@@ -393,7 +395,8 @@ a.button1:active{
 
 
 .recipe_header p, .ingredientlist li, .directions p {
-  line-height: 1.6rem;
+  line-height: 2.3rem;
+  font-size: 1.3rem;
   font-family: 'Roboto-Light';
   color: #333333;
   width: 592px;
@@ -700,6 +703,18 @@ font-size: 0.8rem;
   border-radius: 5px;
 }
 
+.view_recipe_container, .text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+
 .viewcontainer {
   padding-top: 4rem;
   display: flex;
@@ -708,6 +723,8 @@ font-size: 0.8rem;
   flex-direction: column;
   font-family: 'Roboto'
 }
+
+
 
 
 .view {
@@ -1122,6 +1139,12 @@ th, td {
   padding-left: 4rem;
   padding-right: 4rem;
   padding-bottom: 1rem;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
 }
 
-
+.viewcontainer h1 {
+  font-size: 2.1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}

@@ -6,6 +6,7 @@ $page_title = 'Edit Recipe';?>
 
 <?php
 
+
 if (isset($_POST['update'])) {
   $recipe_id = $_POST['recipe_id'];
   // Make sure GET ID == post ID
@@ -13,12 +14,13 @@ if (isset($_POST['update'])) {
       redirectTo('/admin/recipes/edit.php?id=' . $_GET['id'] . '&error=User ID does not match current recipe.');
   }
   //  Parse Data
+  $new_uploaded_file_id = null;
+
   $title = mysqli_real_escape_string($db_connection, $_POST['title']);
   $prep_time = mysqli_real_escape_string($db_connection, $_POST['prep_time']);
   $cook_time = mysqli_real_escape_string($db_connection, $_POST['cook_time']);
   $servings = mysqli_real_escape_string($db_connection, $_POST['servings']);
   $description = mysqli_real_escape_string($db_connection, $_POST['description']);
-  $image = mysqli_real_escape_string($db_connection, $_POST['image']);
   $ingredients = mysqli_real_escape_string($db_connection, $_POST['ingredients']);
   $step_1 = mysqli_real_escape_string($db_connection, $_POST['step_1']);
   $step_2 = mysqli_real_escape_string($db_connection, $_POST['step_2']);
@@ -26,7 +28,7 @@ if (isset($_POST['update'])) {
   $step_4 = mysqli_real_escape_string($db_connection, $_POST['step_4']);
   $step_5 = mysqli_real_escape_string($db_connection, $_POST['step_5']);
   $step_6 = mysqli_real_escape_string($db_connection, $_POST['step_6']);
-  $file_id = mysqli_real_escape_string($db_connection, $_POST['file_id']);
+  $file_id = (float)$new_uploaded_file_id;
 
   // Build Query
   $query = 'UPDATE add_recipes ';
@@ -36,7 +38,6 @@ if (isset($_POST['update'])) {
   $query .= "cook_time = '{$cook_time}', ";
   $query .= "servings = '{$servings}', ";
   $query .= "description = '{$description}', ";
-  $query .= "image = '{$image}', ";
   $query .= "ingredients = '{$ingredients}', ";
   $query .= "step_1 = '{$step_1}', ";
   $query .= "step_2 = '{$step_2}', ";

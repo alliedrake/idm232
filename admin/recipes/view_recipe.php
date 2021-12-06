@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Edit Recipe';?>
+$page_title = 'View Recipe';?>
 
 <?php require_once __DIR__  . '/../../_global/header.php';?>
 
@@ -9,9 +9,11 @@ if (isset($_GET['id'])) {
     $recipe_id = $_GET['id'];
 
     // Build Query
-    $query .= 'SELECT * ';
-    $query .= 'FROM add_recipes ';
-    $query .= 'WHERE id=' . $recipe_id;
+    $query = 'SELECT recipe.id, recipe.title, recipe.description, recipe.servings, file.file_path ';
+    $query .= 'FROM add_recipes AS recipe ';
+    $query .= 'INNER JOIN files AS file ';
+    $query .= 'ON recipe.file_id = file.id ';
+    $query .= 'WHERE recipe.id = ' . $recipe_id;
 
     $db_results = mysqli_query($db_connection, $query);
     if ($db_results && $db_results->num_rows > 0) {
@@ -29,12 +31,21 @@ if (isset($_GET['id'])) {
 
 
 <div class="viewcontainer">
-    <h1><?php echo $recipe['title']; ?>
-    </h1>
+
+<h1><?php echo $recipe['title']; ?>
+  </h1>
+
+    <p><img
+      src=" <?php echo $recipe['file_path']; ?>"
+      img width="150" alt=""></p>
 
     <p>Description: <?php echo $recipe['description']; ?>
     </p>
+
     <p>Servings: <?php echo $recipe['servings']; ?>
+
+    
+  
     
     <div class='view'>
     <a class="editbutton" href="<?php siteUrl('/admin/recipes/edit_recipe.php?id=')?><?php echo $recipe['id'];?>">Edit</a>

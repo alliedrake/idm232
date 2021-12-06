@@ -64,50 +64,46 @@ if (isset($_POST['submit'])) {
     }
 
 }
-
 ?>
 
 <?php
 
 
-// if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
 
-// //  Submit rest of the form
-// $title = mysqli_real_escape_string($db_connection, $_POST['title']);
-// $prep_time = mysqli_real_escape_string($db_connection, $_POST['prep_time']);
-// $cook_time = mysqli_real_escape_string($db_connection, $_POST['cook_time']);
-// $servings = mysqli_real_escape_string($db_connection, $_POST['servings']);
-// $description = mysqli_real_escape_string($db_connection, $_POST['description']);
-// $image = mysqli_real_escape_string($db_connection, $_POST['image']);
-// $ingredients = mysqli_real_escape_string($db_connection, $_POST['ingredients']);
-// $step_1 = mysqli_real_escape_string($db_connection, $_POST['step_1']);
-// $step_2 = mysqli_real_escape_string($db_connection, $_POST['step_2']);
-// $step_3 = mysqli_real_escape_string($db_connection, $_POST['step_3']);
-// $step_4 = mysqli_real_escape_string($db_connection, $_POST['step_4']);
-// $step_5 = mysqli_real_escape_string($db_connection, $_POST['step_5']);
-// $step_6 = mysqli_real_escape_string($db_connection, $_POST['step_6']);
-// $file_id = mysqli_real_escape_string($db_connection, $_POST['file_id']);
+//  Submit rest of the form
+$title = mysqli_real_escape_string($db_connection, $_POST['title']);
+$prep_time = mysqli_real_escape_string($db_connection, $_POST['prep_time']);
+$cook_time = mysqli_real_escape_string($db_connection, $_POST['cook_time']);
+$servings = mysqli_real_escape_string($db_connection, $_POST['servings']);
+$description = mysqli_real_escape_string($db_connection, $_POST['description']);
+$ingredients = mysqli_real_escape_string($db_connection, $_POST['ingredients']);
+$step_1 = mysqli_real_escape_string($db_connection, $_POST['step_1']);
+$step_2 = mysqli_real_escape_string($db_connection, $_POST['step_2']);
+$step_3 = mysqli_real_escape_string($db_connection, $_POST['step_3']);
+$step_4 = mysqli_real_escape_string($db_connection, $_POST['step_4']);
+$step_5 = mysqli_real_escape_string($db_connection, $_POST['step_5']);
+$step_6 = mysqli_real_escape_string($db_connection, $_POST['step_6']);
+$file_id = (float)$new_uploaded_file_id;
 
-
-// $query = 'INSERT INTO add_recipes (title, prep_time, cook_time, servings, description, image, ingredients, step_1, step_2, step_3, step_4, step_5, step_6, file_id)';
-// $query .= "VALUES ('{$title}', '{$prep_time}', '{$cook_time}', '{$servings}', '{$description}', '{$image}', '{$ingredients}', '{$step_1}','{$step_2}','{$step_3}', '{$step_4}', '{$step_5}','{$step_6}','1')";
-
-
-
-// $db_results = mysqli_query($db_connection, $query);
+//Build Query
+$query = 'INSERT INTO add_recipes (title, prep_time, cook_time, servings, description, ingredients, step_1, step_2, step_3, step_4, step_5, step_6, file_id)';
+$query .= "VALUES ('{$title}', '{$prep_time}', '{$cook_time}', '{$servings}', '{$description}', '{$ingredients}', '{$step_1}','{$step_2}','{$step_3}', '{$step_4}', '{$step_5}','{$step_6}','{$file_id}')";
 
 
 
 
+$db_results = mysqli_query($db_connection, $query);
 
-// if ($db_results && $db_results->num_rows > 0) {
-//     // Success
-//     redirectTo('/admin/recipes/');
-// } else {
-//     // Error
-//     redirectTo('/admin/recipes/index.php?error=' . mysqli_error($db_connection));
-// }
-// }
+
+if ($db_results && $db_results->num_rows > 0) {
+    // Success
+    redirectTo('/admin/recipes/');
+} else {
+    // Error
+    redirectTo('/admin/recipes/index.php?error=' . mysqli_error($db_connection));
+}
+}
 
 ?>
 
