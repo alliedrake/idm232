@@ -36,7 +36,7 @@ if (isset($_GET['id'])) {
   </h1>
 
     <p><img
-      src=" <?php echo $recipe['file_path']; ?>"
+      src=" <?php echo $app['url'] . $recipe['file_path']; ?>"
       img width="150" alt=""></p>
 
     <p>Description: <?php echo $recipe['description']; ?>

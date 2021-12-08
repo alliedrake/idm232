@@ -7,11 +7,19 @@
  */
 
 
-function siteUrl($path = '')
+function siteUrl($path = '', $echo = true)
 {
     global $app;
     $url = $app['url'];
-    echo $url . $path;
+    if ($echo = true) {
+        echo $url . $path;
+    }
+
+    else {
+        return $url . $path;
+    }
+    
+
 }
 
 function redirectTo($path)

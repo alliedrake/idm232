@@ -346,12 +346,13 @@ a.button1:active{
   display: flex;
   justify-content: right;
   gap: 15px;
+  margin-right: 1.5rem;
 }
 
 .recipeicons img {
   border: 2px solid #DCE5D5;
   border-radius: 5px;
-  padding: 5px;
+  padding: 7px;
 }
 
 .recipe-container, .text-container {
@@ -361,21 +362,30 @@ a.button1:active{
   flex-direction: column;
   margin-left: 3rem;
   margin-right: 3rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .recipe-container {
   padding-top: 3rem;
 }
 
+.recipe_header {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .recipe_header h1 {
+  line-height: 3.4rem;
+  font-size: 2.8rem;
   padding-top: 0.5rem;
   font-family: 'Roboto-Bold';
   color: #333333;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  line-height: 2.6rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  line-height: 3.3rem;
 }
 
 .ingredients h2 {
@@ -385,6 +395,7 @@ a.button1:active{
   margin-left: 10px;
   margin-right: 10px;
   line-height: 2.6rem;
+  font-size: 2.2rem;
 }
 
 
@@ -401,18 +412,20 @@ a.button1:active{
   margin-bottom: -10px;
 }
 
-
+.recipe_header p {
+  font-family: 'Roboto-Bold';
+  padding-bottom: 1rem;
+}
 
 
 .recipe_header p, .ingredientlist li, .directions p {
   line-height: 2.3rem;
-  font-size: 1.3rem;
-  font-family: 'Roboto-Light';
+  font-size: 1.5rem;
+  font-family: 'Roboto-Regular';
   color: #333333;
   word-wrap: break-word;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  padding-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .ingredientlist ul {
@@ -431,34 +444,7 @@ a.button1:active{
 padding-top: 2rem;
 color: #333333;
 font-family: "Roboto-Bold";
-}
-
-
-.morerecipes img {
-  width: 175px;
-  height: 125px;
-}
-
-.morerecipes {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  gap: 40px;
-  padding-bottom: 2rem;
-  padding-top: 3rem;
-}
-
-.morerecipes h3 {
-  text-align: left;
-  font-size: 1.2rem;
-  font-family: 'Roboto-Bold';
-  color: #333333;
-}
-
-.morerecipescontainer {
-  font-family:'Roboto-Bold';
-  color: #333333;
+font-size: 2.2rem;
 }
 
 .result1 h3, .result2 h3 {
@@ -469,6 +455,29 @@ font-family: "Roboto-Bold";
   font-family: 'Roboto-Medium';
 }
 
+/* Media Queries */
+
+@media screen and (min-width: 1000px) {
+
+  .recipe_header {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .recipe_container {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .recipe_header h1 {
+    font-size: 1.5rem;
+  }
+}
 
 
 
@@ -1040,6 +1049,7 @@ width: 15%;
   justify-content: center;
   align-items: center;
   padding-bottom: 3rem;
+  font-family:'Roboto-Regular';
 }
 
 .addrecipesubmit button{
@@ -1089,6 +1099,20 @@ width: 15%;
   flex-direction: column;
 }
 
+.recipe_container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.recipe_container2 td  {
+font-family: 'Roboto-Regular';
+}
+
+
+
+
 .table_container table {
   border: 3px solid #DCE5D5;
 }
@@ -1096,6 +1120,7 @@ width: 15%;
 .table_container th {
   border-bottom: 3px solid #DCE5D5;
 }
+
 
 
 #staff h1 {

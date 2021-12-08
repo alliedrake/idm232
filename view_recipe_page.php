@@ -44,7 +44,7 @@ if (isset($_GET['id'])) {
 </div>
 
 <div class="recipeimage">
-<p><img src=" <?php echo $recipe['file_path']; ?>"img width="800" alt=""></p>
+<p><img src=" <?php echo $app['url'] . $recipe['file_path']; ?>"img width="800" alt=""></p>
 </div>
 
 <div class="text-container">
@@ -61,43 +61,23 @@ if (isset($_GET['id'])) {
 <div class="directions">
     <h2>Directions</h2>
     <hr>
-    <p><b>Step 1: </b><?php echo $recipe['step_1'];?></p>
-    <p><b>Step 2: </b><?php echo $recipe['step_2'];?></p>
-    <p><b>Step 3: </b><?php echo $recipe['step_3'];?></p>
-    <p><b>Step 4: </b><?php echo $recipe['step_4'];?></p>
-    <p><b>Step 5: </b><?php echo $recipe['step_5'];?></p>
-    <p><b>Step 6: </b><?php echo $recipe['step_6'];?></p>
+    <h2>Step 1: </h2><p><?php echo $recipe['step_1'];?></p>
+    
+    <h2>Step 2: </h2><p><?php echo $recipe['step_2'];?></p>
+    
+    <h2>Step 3: </h2><p><?php echo $recipe['step_3'];?></p>
+    
+    <h2>Step 4: </h2><p><?php echo $recipe['step_4'];?></p>
+    
+    <h2>Step 5: </h2><p><?php echo $recipe['step_5'];?></p>
+    
+    <h2>Step 6: </h2><p><?php echo $recipe['step_6'];?></p>
+    <br>
+    <br>
+    <br>
 </div>
 
 </div>
-
-<div class="morerecipescontainer">
-    <h2>More Recipes</h2>
-    <hr>
-</div>
-
-<div class="morerecipes">
-<div class='recipe1'>
-<img src="dist/images/chickenpiccata.png">
-<h3>Quick Chicken Picatta</h3>
-</div>
-
-<div class="recipe2">
-<img src="dist/images/chickenpiccata.png">
-<h3>Quick Chicken Picatta</h3>
-</div>
-
-<div class="recipe3">
-<img src="dist/images/chickenpiccata.png">
-<h3>Quick Chicken Picatta</h3>
-</div>
-
-<div class="recipe3">
-    <img src="dist/images/chickenpiccata.png">
-    <h3>Quick Chicken Picatta</h3>
-    </div>
-</div>
-
 
 </div>
 </div>

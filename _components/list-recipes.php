@@ -21,7 +21,7 @@
               echo '<td>' . $row['id'] . '</td>';
               echo '<td>' . $row['title'] . '</td>';
               echo '<td><a href="view_recipe.php?id=' . $row['id'] . '">' . $row['description']. '</a></td>';
-              echo '<td> <img width="100" src="' . $row['file_path'] . '" alt=""></td>';
+              echo '<td> <img width="100" src="' . $app['url'] .  $row['file_path'] . '" alt=""></td>';
               echo '</td>';
           }
         ?> 

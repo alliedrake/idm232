@@ -8,25 +8,40 @@
 //Upload Image 
 
 if (isset($_POST['submit'])) {
-    //Parse Data
+    // Parse Data
+    
+
+    
+    $files_array = explode('.', $_FILES['image']['name']);
+    $file_title = slugify($files_array[0]);
+    $extension = $files_array[1];
+    $final_file_name = $file_title . '.' . $extension;
+
+
     // echo '<pre>';
-    // var_dump($_FILES['image']);
+    // var_dump($file_title);
+    // var_dump($extension);
     // echo '<pre>';
     // die;
 
-    $file_title = slugify($_FILES['image']['name']);
+
     $temp_name = $_FILES['image']['tmp_name'];
 
     // dist/uploads/image-name.png
-    $file_path = $app['asset_url'] . $file_title;
+    $file_path = $app['asset_url'] . $final_file_name;
 
     // idm232/public_html/ + dist/uploads/image-name.png
-    $file_destination = __DIR__ . "/../.." . $file_path;
+    $file_destination =  __DIR__ . "/../.." . $file_path;
+
+    // echo '<pre>';
+    // var_dump($file_destination);
+    // echo '<pre>';
+    // die;
 
 
 //     // Build Query
-    $query = 'INSERT INTO files (file_path, file_title) ';
-    $query .= "VALUES ('{$file_path}', '{$file_title}')";
+    $query = 'INSERT INTO files (file_path, final_file_name) ';
+    $query .= "VALUES ('{$file_path}', '{$final_file_name}')";
   
    
     
