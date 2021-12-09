@@ -24,9 +24,12 @@
     <div class="main_content">
 
         <div class="featured1">
-        <a href="recipe.php"><img src="dist/images/stuffedsquash.png" alt="squash"></a>
-        <a href="recipe.php"><h3>Sausage and Pear Stuffed Acorn Squash</h3></a>
+        <a href="<?php siteUrl('/view_recipe_page.php?id=65')?>"><img src="dist/images/smoked-gouda.png"></a>
+        <a href="<?php siteUrl('/view_recipe_page.php?id=65')?>"><h3>Smoked Gouda & Mushroom Flatbread with Endive & Apple Salad</h3></a>
         </div>
+    
+        
+        
         
         <div class="featured2">
         <img src="dist/images/chickenpiccata.png" alt="chickenpiccata">
@@ -42,7 +45,7 @@
         <div class='recipes1'>
 
         <div class="firstfeature">
-            <img src="dist/images/bananabread.jpg">
+            <img src="dist/uploads/chicken_rice_roasted_carrots.jpg">
             <h3>Banana Bread</h3>
 
         </div>

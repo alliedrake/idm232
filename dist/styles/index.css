@@ -607,8 +607,15 @@ align-items: center;
   text-align: left;
 }
 
+.descript a {
+  text-decoration: none;
+  color:#333333;
+}
+
+
 .descript h3 {
   font-size: 1.6rem;
+  color: #333333;
 }
 
 .result1 img, .result2 img, .result3 img, .result4 img {
@@ -622,12 +629,61 @@ align-items: center;
     width: 30%;
     height: 100%;
     padding-top: 1rem;
+    align-self: center;
+  }
+  
+  .descript h3 {
+      font-size: 1.2rem;
+      color: #333333;
+  }
+}
+
+
+@media screen and ( max-width: 700px) {
+  
+  .result1, .result2, .result3, .result4 {
+    display: flex;
+    justify-content: center;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    gap: 30px;
+    padding-top: 1rem;
+  } 
+}
+
+
+@media screen and ( max-width: 600px) {
+  
+  .result1 img, .result2 img, .result3 img, .result4 img {
+    width: 30%;
+    height: 100%;
+    padding-top: 1rem;
+    align-self: center;
+  }
+  
+  .descript h3 {
+      font-size: 0.8rem;
+      color: #333333;
+  }
 }
 
 .result1 h4, .result2 h4, .result3 h4, .result4 h4 {
 font-size: 0.8rem;
 }
 
+@media screen and ( min-width: 1000px) {
+  
+  .catresultcontainer {
+    font-family: 'Roboto-Bold';
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    flex-direction: column;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: 77%;
+
+}
 }
   
 

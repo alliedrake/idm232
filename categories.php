@@ -5,9 +5,11 @@
 require_once __DIR__  . '/_global/header.php';?>
 
 
+
+
 <div class="categoryheader">
             <h1>Categories</h1>
-            <div id="resultsheader"><h4>4 results for <b>Dessert</b></h4></div>
+            <div id="resultsheader"><h4>6 results for <b>Vegetables</b></h4></div>
         </div>
 
         <div class="categorydiv">
@@ -49,44 +51,76 @@ require_once __DIR__  . '/_global/header.php';?>
             </div>
               
             <div class="catresultcontainer">
-                <div class="result1">
+              
+
+                <div class="result4">
                   <div class="descript">
-                  <h3>Banana Bread</h3>
-                    <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
+                  <a href="<?php siteUrl('/view_recipe_page.php?id=65')?>"><h3>Smoked Gouda & Mushroom Flatbread with Endive & Apple Salad</h3></a>
+                    <h4>Total Time: 35 minutes | Servings: 5</h4>
                   </div>
-                    <img src="dist/images/chickenpiccata.png">
+                    <img src="dist/images/smoked-gouda.png">
                 </div>
                 <hr>
-
+          
         
                 <div class="result2">
                   <div class="descript">
-                  <h3>Banana Bread</h3>
-                    <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
+                  <a href="<?php siteUrl('/view_recipe_page.php?id=35')?>"><h3>Broccoli & Basil Pesto Sandwiches with Romaine & Citrus Salad</h3></a>
+                    <h4>Total Time: 25 minutes | Servings: 5</h4>
                   </div>
-                    <img src="dist/images/chickenpiccata.png">
+                    <img src="dist/images/broccoli_basil_pesto_sandwiches.jpg">
                 </div>
                 <hr>
           
-
-              <div class="result3">
-                <div class="descript">
-                <h3>Banana Bread</h3>
-                  <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
-                </div>
-                  <img src="dist/images/chickenpiccata.png">
-              </div>
-              <hr>
           
 
-            <div class="result4">
-              <div class="descript">
-              <h3>Banana Bread</h3>
-                <h4>Total Time: 1 hr 30 min | Servings: 2</h4>
-              </div>
-                <img src="dist/images/chickenpiccata.png">
-            </div>
-            <hr>
+                <!-- <div class="result3">
+                  <div class="descript">
+                  <a href="<?php siteUrl('/view_recipe_page.php?id=37')?>"><h3>Bucatini Alfredo with Broccoli</h3></a>
+                    <h4>Total Time: 30 minutes | Servings: 5</h4>
+                  </div>
+                    <img src="dist/images/alfredo.jpg">
+                </div>
+                <hr> -->
+
+
+                <div class="result4">
+                  <div class="descript">
+                  <a href="<?php siteUrl('/view_recipe_page.php?id=36')?>"><h3>Broccoli & Mozzarella Calzones with Caesar Salad</h3></a>
+                    <h4>Total Time: 40 minutes | Servings: 4</h4>
+                  </div>
+                    <img src="dist/images/broccoli_calzones.jpg">
+                </div>
+                <hr>
+
+                <div class="result4">
+                  <div class="descript">
+                  <a href="<?php siteUrl('/view_recipe_page.php?id=38')?>"><h3>Bucatini & Tomato Sauce with Roasted Broccoli</h3></a>
+                    <h4>Total Time: 30 minutes | Servings: 2</h4>
+                  </div>
+                    <img src="dist/images/bucatini_tomato_sauce.jpg">
+                </div>
+                <hr>
+
+                <div class="result4">
+                  <div class="descript">
+                  <a href="<?php siteUrl('/view_recipe_page.php?id=39')?>"><h3>Cheesy Enchiladas Rojas with Mushrooms & Kale</h3></a>
+                    <h4>Total Time: 25 minutes | Servings: 4</h4>
+                  </div>
+                    <img src="dist/images/enchiladas.jpg">
+                </div>
+                <hr>
+
+                <div class="result4">
+                  <div class="descript">
+                  <a href="<?php siteUrl('/view_recipe_page.php?id=47')?>"><h3>Mushroom & Potato Tacos with Romaine & Orange Salad</h3></a>
+                    <h4>Total Time: 20 minutes | Servings: 4</h4>
+                  </div>
+                    <img src="dist/images/mushroom_potato_tacos.jpg">
+                </div>
+                <hr>
+          
+              
 
           </div>
           </div>
