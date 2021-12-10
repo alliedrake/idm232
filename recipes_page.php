@@ -7,13 +7,6 @@
             <div id="alphabet"><h4>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</h4></div>
         </div>
 
-        <div class="recipesearchbar">
-          <input type="text" placeholder="Search.." name="search">
-                    <button type="submit">Search</button>
-        </div>
-    
-
-
 
 <?php
 

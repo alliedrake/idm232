@@ -30,10 +30,7 @@ require_once __DIR__ . '/../_includes/helper.php';
                 <a href="<?php siteUrl('/auth/login.php'); ?>">Log In</a>
                 <a href="<?php siteUrl('/categories.php'); ?>">Categories</a>
                 <div class="search-container">
-                  <form action="search.php">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit">Search</button>
-                  </form>
+                <a href="<?php siteUrl('/search.php'); ?>">Search</a>
                 </div>
               </div> 
 

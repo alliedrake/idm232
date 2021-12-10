@@ -64,6 +64,10 @@
     padding-bottom: 2rem;
   }
 
+  a:visited {
+    color:#333333;
+  }
+  
   .overview, .process {
     text-align: left;
     padding-top: 2rem;

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <title>IDM 232 Case Study</title>
+    </head>
+
+    <body> 
+
+        <header>
+        <div class="title"><h1>IDM 232: Case Study</h1></div>
+        <img src="images/blank.png" alt="headerimage" class="header_image" style="width:100%;"> 
+        </header>
+
+    <div class="container">
+
+        <div class="overview">
+            <h1>Overview</h1>
+            <p>For my IDM 232 Scripting class, I had to build</p>
+        </div>
+
+
+        <div class="context_and_challenge">
+            <h1>Context and Challenge</h1>
+        </div>
+
+        <div class="background">
+            <h2>Background</h2>
+            <p>This was a solo project that I was working on for my IDM 232 Scripting class. The class ran from late September to early December.
+                In this class, I was introduced to the fundamentals of PHP/MySQL and learned how to implement PHP into my recipe website. The biggest
+                focus for this project were these four basic functions: create, read, update, and delete. The purpose of the project was to be able to perform CRUD
+                using a database and dynamically add, edit, view, and delete recipes and users within the site.</p>
+        </div>
+
+        <div class="problem">
+            <h2>Problem</h2>
+            <p>PHP is the next step in developing dynamic and interactive websites, so it's important as an UI designer that I learn these tools.
+                PHP allows me to improve the functionality of the website to make the experience more enjoyable for the user. This language allows far
+                more capabilities than what I currently know, so learning it and being able to implement it into my own website will be useful and allow me to 
+                have a better understanding of development.</p>
+            </p>
+        </div>
+        
+        <div class="goals">
+            <h2>Goals</h2>
+            <p>
+                <ul>
+                    <li>Learn and implement the fundamentals of PHP into a multi-page website</li>
+                    <li>Apply CRUD to recipes and admin components on the website</li>
+                    <li>Preview website locally through MAMP and transfer files and database to Bluehost domain</li>
+                    <li>Successfully code website with PHP enhancements without any issues/errors</li>
+                </ul>
+            </p>
+        </div>
+
+    <div class="process">
+        <h1>Process and Insight</h1>
+    </div>
+
+    <div class="styletile">
+            <div class="stdescription">
+            <h2>1. Style Tile</h2>
+            <p>Started with putting together a style tile for what I wanted the site to look like before I started on building templates.
+               I looked at other recipe websites for inspiration and wanted to go with a lighter interface for readability purposes. </p>
+            </div>
+            <img src="images/styletile.png" alt="styletile">
+    </div>
+
+    <div class="alpha_design">
+        <div class="addescription">
+            <h2>2. Alpha Design</h2>
+            <p>Next I planned out what pages I would be including on my website and then began wireframing. Once I was finished
+               with my low-fidelity wireframes, I began to stylize the content on each page and figured out what worked best with the 
+               color palette that I chose.
+            </p>
+            </div>
+            <img src="images/alphadesigns.png" alt="alpha_designs">
+        </div>
+
+
+    <div class="alpha_code">
+        <div class="acdescription">
+            <h2>3. Coding Out the Pages</h2>
+            <p>After designing each of my pages, I then began coding each page in HTML and tried my best to replicate what I had planned for. A lot of this part
+                was making sure I stayed organized with my class names so that I could easily customize them using CSS. I enjoyed this part because I was able to 
+                build off of my knowledge of HTML and CSS from previous classes, and the amount of time it took me to complete the alpha was far less then term long projects
+                I completed in the past when I was first introduced to these languages. This is a screenshot of the home page that I coded.
+            </p>
+            </div>
+            <img src="images/alphasc.png" alt="alpha_code">
+        </div>
+
+        <div class="beta_project">
+            <div class="bpdescription">
+                <h2>4. Implementing PHP</h2>
+                <p>In this stage, I had to apply what I learned so far throughout the class into this beta assignment. I had to convert all of the HTML pages I made
+                    into PHP files and preview my website using MAMP, a local server. This was the most intimidating part, but I found that if I looked back and reviewed
+                    what we learned each week of the class, I was able to follow along and make sure I was doing the assignment correctly. I used PHP to make creating, reading, updating, and deleting
+                    recipes and users possible as an admin on my pages. At this point of the project, everything was working perfectly
+                    locally and the database I connected to my website was working.
+                </p>
+                </div>
+                <img src="images/beta_project.png" alt="beta_code">
+            </div>
+
+            <div class="bluehost">
+                <div class="bhdescription">
+                    <h2>5. Connecting to Bluehost</h2>
+                    <p>Since this would be my first time dealing with a database on my server, I was nervous that even though my site worked locally, it wouldn't on my domain for my beta assignment. I imported my
+                        local database onto my Bluehost and uploaded the files into Cyberduck. I loaded the page, but it was broken. If I could go back, I would've done this step first so that 
+                        I wouldn't have run into errors late into the project. After screensharing with my professor, we found that errors weren't showing up on the page so that's why we couldn't 
+                        figure out what was broken. Once we figured that out, we spent a lot of time debugging. Even though the code for my file paths and global files were working locally,
+                        they weren't working on my server and that was the cause of the problem. After a few tweaks, my site was up and running and the database was creating, updating, editing, and 
+                        deleting users and recipes.
+                    </p>
+                    </div>
+                    <!-- <img src="images/beta_project.png" alt="beta_code"> -->
+                </div>
+
+                <div class="final_project">
+                <div class="fpdescription">
+                    <h2>6. Final Project</h2>
+                    <p>The beta assignment helped me to code a lot of what I already needed for the final project, so I was happy with the progress I had made. At this point, I needed to figure out how to merge two tables
+                        (files and recipes table) so that I could upload images of my recipes when I create recipes on the site and have them display. I got it to work locally so when I uploaded an 
+                        image it would save to my uploads folder and then display with the recipe on both my user and and admin recipes page. I tweaked the tables for those pages a little bit so you could
+                        tell the difference between the user and admin page after that. When I uploaded it onto my domain, everything worked except that the images weren't loading. I realized that one of my functions I used
+                        in my code was making the image path incorrect, so once I fixed that, my images loaded correctly. I ended up with users pages and admin pages, and in the admin pages, the user is allowed
+                        to create, read, update, and delete recipes and users. View my final project <a href="https://allisondrakedesign.com/idm232/home.php">here.</a>
+                    </p>
+                    </div>
+
+                    <h2>The Solution</h2>
+                    <p>What really helped me succeed in coding the site was by referring back to my own code and keeping things uniform while only making small adjustments. For example,
+                        the code I built for CRUD for my users was the same for my recipes, and all I did was tweak what I was pulling from the database and the variables I 
+                        was using. I made sure the code I built for users worked completely before trying to go on to the next thing. I also went back to my lessons and built my code 
+                        by following the steps that we did week-by-week, so that I could make sure I fully understood what I was doing without getting ahead of myself. Sticking to these methods 
+                        made my process a lot easier, and you can see by the design on my site that a lot of the structure was uniform. For styling, I also went back to my original HTML
+                        files and kept the same class names so that I didn't have to worry about trying to tweak elements or forgetting how I styled them. These steps made my final project 
+                        what it is and I can confidently go back into my code and understand what I did.
+                    </p>
+                    </div>
+
+                    <div class="final_project">
+                        <div class="fpdescription">
+                            <h2>The Results</h2>
+                            <p>By the end of the term, I was able to build pages using HTML, CSS, and PHP/MySQL and connect information on the site to databases that allow me
+                                to create, read, update, and delete content. I learned how to stay organized after making 30+ files of code by grouping my files into folders
+                                and being very careful to remember the changes I made when switching from file to file. Transferring my local files to my domain was a complicated
+                                part of the project that I worked through and overcame. If I had more time, I would actually make my login system work and create sessions for users
+                                that login. I learned that there is a lot of time and planning that goes into using databases and even more when building a large scale website.
+                                I also saw how using databases can organize a lot of information and are a powerful tool that I hope to keep implementing into future projects.
+                            </p>
+                            </div>
+                    
+                </div>
+
+                
+
+
+
+
+
+</div>
+
+
+    </body>
+    </html>
