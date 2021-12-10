@@ -2,17 +2,9 @@
 $page_title = "Recipe";
 ?>
 
-<?php include_once __DIR__ . '/../../_global/header.php';
-      include_once __DIR__ . '/../../_includes/recipe-functions.php';      
-
+<?php include_once __DIR__ . '/../../_global/header.php';      
 ?>
 
-<?php if (isset($_GET['keyword'])) {
-    $keyword = $_GET['keyword'];
-    $recipe = search_recipe_with_keyword($keyword);
-} else {
-}
-?>
 
 
 
@@ -24,16 +16,18 @@ $page_title = "Recipe";
         <div class="recipesearchbar">
         
         <form class="search-form" action="" method="GET">
-        <label for="">Search</label>
-        <input type="text" name="keyword" placeholder="John Doe"
+        <label for="search">Search</label>
+        <input type="text" name="keyword" placeholder=""
             value="<?php echo @$_GET['keyword']; ?>">
         <input type="submit" value="submit">
         </form>
+
         </div>  
 
         <div class="addrecipebutton">
           <button type="submit"><a href="<?php siteUrl('/admin/recipes/create_recipe.php'); ?>">Add New Recipe</a></button>
         </div>
+</div>
 
 
 
