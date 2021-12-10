@@ -1,4 +1,4 @@
-<div class="catresultcontainer">
+<div class="recipecontainer">
 
 
 <table>

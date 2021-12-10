@@ -1,0 +1,147 @@
+  
+.html {
+    margin-left: 1rem;
+    margin-right: 1rem; 
+  }
+  
+  body {
+    font-family: 'Roboto';
+    background: #FCFFFA;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+   
+  @font-face {
+    font-family: 'Roboto-Bold';
+    src: url('./fonts/Roboto-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Roboto-Medium';
+    src: url('./fonts/Roboto-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Roboto-Regular';
+    src: url('./fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Roboto-Light';
+    src: url('./fonts/Roboto-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  * {box-sizing: border-box;}
+
+  
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .container h2 {
+      padding-left: 1.5rem;
+  }
+
+  .title h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .overview, .process {
+    text-align: left;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .overview p {
+      font-size: 1.1rem;
+      line-height: 1.7rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px 0 rgba(0.2,0.2,0.2,0.2);
+      border-radius: 5px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+  }
+
+  .context_and_challenge, .process {
+    padding-bottom: 0.5rem;
+  }
+
+  .background {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px 0 rgba(0.2,0.2,0.2,0.2);
+      border-radius: 5px;
+  }
+
+
+  .background p, .problem p, .goals ul, .stdescription p, .addescription p, .acdescription p, .beta_project p, .bluehost p, .final_project p{
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      line-height: 1.7rem;
+      font-size: 1.1rem;
+  }
+
+  .problem, .goals {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0.2,0.2,0.2,0.2);
+    border-radius: 5px;
+  }
+
+.goals ul {
+  padding-left: 2.5rem;
+}
+
+.process h1 {
+  text-align: left;
+}
+
+.styletile img, .alpha_design img, .alpha_code img, .beta_project img, .final_project img  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.styletile, .alpha_design, .alpha_code, .beta_project, .bluehost, .final_project {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 1rem;
+  padding-top: 1rem; 
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0.2,0.2,0.2,0.2);
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.stdescription, .addescription, .acdescription, .bpdescription, .bhdescription, .fpdescription {
+  flex-direction: column;
+}
+  

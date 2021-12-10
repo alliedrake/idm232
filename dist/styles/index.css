@@ -224,9 +224,11 @@ transform: translate(-50%, -50%);
 
 .recipes1 h3 {
   text-align: left;
-  font-size: 1.3rem;
-  font-family: 'Roboto-Bold';
-  color: #333333;
+    font-size: 1.3rem;
+    font-family: 'Roboto-Bold';
+    color: #333333;
+    width: 250px;
+    word-wrap: break-word;
 }
 
 .recipes1 img {
@@ -311,9 +313,19 @@ a.button1:active{
 
 .recipes h3 {
   text-align: left;
-  font-size: 1.3rem;
-  font-family: 'Roboto-Bold';
-  color: #333333;
+    font-size: 1.3rem;
+    font-family: 'Roboto-Bold';
+    color: #333333;
+    word-wrap: break-word;
+    width: 250px;
+}
+
+.recipes1 a, .recipes2 a, .recipes3 a {
+  text-decoration: none;
+}
+
+.firstrecipe a, .secondrecipe a, .thirdrecipe a, .fourthrecipe a {
+  text-decoration: none;
 }
 
 .recipes img {
